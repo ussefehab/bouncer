@@ -1,0 +1,102 @@
+.sm{
+    margin-right: 1rem;
+}
+.smt{
+    margin-top: -5px;
+}
+.mdm{
+    margin-right: 5rem;
+}
+
+.smb{
+    margin-bottom: 2rem;
+}
+.ssmb{
+    margin-bottom: .5rem;
+}
+.alignv{
+    display: flex;
+    align-items: center;
+}
+.mrl{
+    padding: 0 1rem;
+}
+.hidden {
+    display: none;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent black */
+    z-index: 55; /* Ensure it is behind the popup but in front of other content */
+    display: none; 
+}
+.counter{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    max-width: 11.6rem;
+    max-height: 4.6rem;
+    padding: 1rem 1rem;
+    border-radius: 3px;
+    background-color: $color-gray--light;
+    @include respond (sphone){
+        gap: .5rem;
+        padding: .5rem;
+
+     } 
+    &__display{
+        font-size: 1.6rem;
+        font-family: proxima nova;
+        @include respond (sphone){
+            font-size: 1.2rem;
+         } 
+    }
+    button{
+        border: none;
+        background: none;
+        svg{
+            width: 1.4rem;
+            height: 1.2rem;
+            fill: $color-primary;
+            cursor: pointer;
+            @include respond (sphone){
+                width: 1.2rem;
+                height: 1rem;
+             } 
+        }
+    }
+}
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 0;
+    border-radius: 3px;
+    width: 100%;
+    svg{
+    width: 1.4rem;
+    height: 1.4rem;
+    fill: $color-white;
+    }
+    span{
+        font-size: 1.4rem;
+        font-family: proxima nova;
+        color: $color-white;
+    }
+
+&__bgColor{
+    &-fb{
+    background-color: $color-fb;
+    }
+    &-tw{
+    background-color: $color-twitter;
+    }
+}
+}

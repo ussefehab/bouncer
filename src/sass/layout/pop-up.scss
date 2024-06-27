@@ -1,0 +1,125 @@
+.pop-up {
+    display: flex;
+    background-color: $color-white;
+    box-shadow: 2rem 3rem 4rem rgba($color-black, .5);
+    width: 96rem;
+    height: 49rem;
+    // position: relative;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: none;
+    @include respond(tab-port) { 
+        width: 80%;
+        height: 28rem;
+      }
+    &__email--container{
+            max-width: 60rem;
+            position: relative;
+            margin: 0 auto;
+            margin-bottom: 7rem;
+            @include respond(tab-port) { 
+                margin-bottom: 2rem;
+              }
+    }
+    &__img{
+        display: flex;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        @include respond(sphone) { 
+            display: none;
+          }
+
+        &--gift{
+            display:inline-block;
+            width: 100%;
+            width: 100%;
+            transform: translateX(9%) scale(1.2)translateY(7%);
+        
+
+        }
+
+    }
+    &__check{
+        display: flex;
+        &--box{
+            margin-right: 1rem;
+        }
+        &--label{
+            font-size: 1.6rem;
+            font-family: proxima nova;
+            color: $color-black-light;
+            @include respond(tab-port) { 
+                font-size: 1.4rem;
+              }
+        }
+
+    }
+    &__btn-close{
+        background: none;
+        position: absolute;
+        top: -2rem;
+        right: -2rem;
+        font-size: 1.4rem;
+        background-color: $color-black;
+        color: $color-white;
+        border-radius: 50%;
+        padding: 1.4rem;
+        transition: all .2s;
+        cursor: pointer;
+        border: none;
+    }
+}
+.email{
+    &__field{
+        padding: 2rem;
+        border: 2px solid $color-gray-border;
+        border-radius: 5px;
+        font-size: 1.7rem;
+        width: 36.9rem;
+        color: $color-gray;
+        @include respond(tab-port) { 
+            width: 30rem;
+            padding: .6rem;
+          }
+
+        &:focus {
+            outline: none;
+          }
+        &::placeholder {
+            color: $color-gray;
+            font-size: 1.4rem;
+            font-family: proxima sb;
+        }
+
+    }
+
+}
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 1px solid #000000;
+    cursor: pointer;
+    position: relative;
+  }
+  input[type="checkbox"]:checked {
+    background-color: #000000; /* Background color when checked */
+  }
+  input[type="checkbox"]:checked::after {
+    content: '✔';
+    position: absolute;
+    top: -3.5px;
+    left: 2px;
+    font-size: 1.6rem;
+    font-family: proxima b;
+    color: white; /* Checkmark color */
+    @include respond(tab-port) { 
+        font-size: 1.4rem;
+      }
+  }

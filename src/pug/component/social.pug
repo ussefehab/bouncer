@@ -1,0 +1,5 @@
+mixin social(img,title,className)
+    div(class=`social ${className}`)
+        svg 
+            use(xlink:href=`${img}`)
+        span #{title}

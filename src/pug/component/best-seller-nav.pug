@@ -1,0 +1,8 @@
+- var navItems = ["All","Mac","Iphone","Ipad","Macbook","Accessories"]
+
+mixin nav 
+    nav
+        ul.best-seller__nav--list
+            each item in navItems
+                li.best-seller__nav--li
+                    a.best-seller__nav--item(href="#"+item) #{item}

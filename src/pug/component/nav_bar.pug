@@ -1,0 +1,28 @@
+- var navItems = ["Home","Store","Iphone","Ipad","Macbook","Accessories"]
+
+- var megaMenuContent = [{ title: "Category", links: ["AirPort & Wireless", "AppleCare", "Bags, Shells & Sleeves","Business & Security","Cables & Docks",] },{ title: "", links: ["Cameras & Video", "Car & Travel", "Cases & Films"] },{ title: "Category", links: ["Charging Devices","Connected Home","Device Care","Display & Graphic","Fitness & Sport",] },{ title: "", links: ["Headphones","HealhKit"] },{ title: "Category", links: ["Mice & Keyboards", "Music Creation", "Networking & Server"] }]
+
+nav.nav 
+  img(src="../../../dist/imgs/logo-main.jpg" class="nav__logo")
+  ul.nav__list
+    each item in navItems
+      li.nav__li
+        if item == "Accessories"
+          a.nav__item(href="#" class="products-link") #{item}
+        if item !== "Accessories"       
+          a.nav__item(href="#"+item) #{item}
+        if item == "Home"
+            .nav__mega-menu
+                .nav__mega-menu-content
+                    each column in megaMenuContent
+                        .nav__mega-menu--column
+                            p.heading--three= column.title
+                            ul.nav__mega-menu--list
+                                each link in column.links
+                                    li
+                                        a.nav__item(href="#") #{link}
+                            
+                            
+
+   
+

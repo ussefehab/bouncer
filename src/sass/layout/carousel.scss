@@ -1,0 +1,92 @@
+.carousel {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    column-gap: 3rem;
+    background-image: linear-gradient(to right, #8F65FF, #FF4858); 
+    position: relative;
+    // overflow: hidden;
+    @include respond(medium-lab) { 
+        padding: 4rem 0;
+    }
+    @include respond(tab-port) { 
+        padding: 6rem 0;
+    }
+    &__flex{
+        // position: absolute;
+        // top: 0;
+        grid-column: 2;
+        grid-row: 1/ 2;
+        padding: 0 3rem;
+        display: flex;    
+        transition: all .3s ease-in-out;
+        @include respond(tab-port) { 
+            grid-column: 1/ -1;
+            padding: 0 15rem;
+          }
+          @include respond (phone){
+            padding: 0 5rem;
+          }
+    }
+
+    &__photo{
+        flex: 0 0 60%;
+        @include respond(medium-lab) { 
+            flex:0 0 45%
+        }
+        @include respond (phone){
+            flex:0 0 35%;
+          }
+        &--img{
+            display: inline-block;
+            width: 90%;
+            height: 120%;
+            margin-bottom: -7%;
+            @include respond(tab-port) { 
+                width: 120%;
+                height: 130%;
+                margin-left: -5rem;
+            }
+        }
+    }
+
+}
+.arrow-left{
+    width: 3rem;
+    height: 3rem;
+    fill: $color-black-light;
+    position: absolute;    
+    top:45%;
+    left: 15%;
+    z-index: 22222;
+    @include respond(tab-port) { 
+        left: 5%;
+      }
+      @include respond (phone){
+        left: 40%;
+        top: 65%;
+        background-color: $color-white;
+        padding: .5rem;
+        border-radius: 50%;
+        fill: $color-black;
+    }
+}
+.arrow-right{
+    width: 3rem;
+    height: 3rem;
+    fill: $color-black-light;
+    position: absolute;    
+    top:45%;
+    right: 15%;
+    z-index: 22222;
+    @include respond(tab-port) { 
+      right: 5%;
+    }
+    @include respond (phone){
+        right: 40%;
+        top: 65%;
+        background-color: $color-white;
+        padding: .5rem;
+        border-radius: 50%;
+        fill: $color-black;
+    }
+}

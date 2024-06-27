@@ -1,0 +1,90 @@
+extend ../base/base.pug
+include ../component/card.pug
+block header
+    .header-container   
+        include ../component/headers.pug
+        include ../component/nav_bar.pug
+block breadcrumbs    
+    include ../component/breadcrumbs.pug
+block product-grid 
+     .product-grid 
+        include ../layout/accesories-banner.pug   
+        .bar 
+            p.bar__item-num 13 item 
+            p.bar__sort-text Sort by 
+            include ../component/drop-down.pug
+            +dropDown("name","modified","price","newest","dropdown1")
+            p.bar__sort-text Show 
+            +dropDown("6","9","12","15","dropdown2")
+            .bar__icons
+                button#grid
+                    svg#icon-grid(class="bar__icons--icon ")
+                        use(xlink:href="../../../dist/sprite3.svg#icon-grid")
+                button#list
+                    svg#icon-list.bar__icons--icon
+                        use(xlink:href="../../../dist/sprite3.svg#icon-lines")
+        .product-grid__card
+            +card("","Apple Macbook Pro","$499 ","$599","card__info","ssmb","","../../../dist/imgs/card-img.svg")
+            +card("","Apple Macbook Pro","$499 ","$599","card__info","ssmb","","../../../dist/imgs/card-img.svg")
+            +card("","Apple Macbook Pro","$499 ","$599","card__info","ssmb","","../../../dist/imgs/card-img.svg")
+            +card("","Apple Macbook Pro","$499 ","$599","card__info","ssmb","","../../../dist/imgs/card-img.svg")
+            +card("","Apple Macbook Pro","$499 ","$599","card__info","ssmb","","../../../dist/imgs/card-img.svg")
+            +card("","Apple Macbook Pro","$499 ","$599","card__info","ssmb","","../../../dist/imgs/card-img.svg")
+            +card("","Apple Macbook Pro","$499 ","$599","card__info","ssmb","","../../../dist/imgs/card-img.svg")
+            +card("","Apple Macbook Pro","$499 ","$599","card__info","ssmb","","../../../dist/imgs/card-img.svg")
+            +card("","Apple Macbook Pro","$499 ","$599","card__info","ssmb","","../../../dist/imgs/card-img.svg")
+            +card("","Apple Macbook Pro","$499 ","$599","card__info","ssmb","","../../../dist/imgs/card-img.svg")
+            +card("","Apple Macbook Pro","$499 ","$599","card__info","ssmb","","../../../dist/imgs/card-img.svg")
+            +card("","Apple Macbook Pro","$499 ","$599","card__info","ssmb","","../../../dist/imgs/card-img.svg")
+        .product-list__card    
+            +card-list("Beats Solo2 On Ear Headphones - Black","Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ...","$499","$599")        
+            +card-list("Beats Solo2 On Ear Headphones - Black","Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ...","$499","$599")        
+            +card-list("Beats Solo2 On Ear Headphones - Black","Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ...","$499","$599")        
+            +card-list("Beats Solo2 On Ear Headphones - Black","Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ...","$499","$599")        
+            +card-list("Beats Solo2 On Ear Headphones - Black","Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ...","$499","$599")        
+            +card-list("Beats Solo2 On Ear Headphones - Black","Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ...","$499","$599")        
+            +card-list("Beats Solo2 On Ear Headphones - Black","Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ...","$499","$599")        
+            +card-list("Beats Solo2 On Ear Headphones - Black","Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ...","$499","$599")        
+            +card-list("Beats Solo2 On Ear Headphones - Black","Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ...","$499","$599")        
+            +card-list("Beats Solo2 On Ear Headphones - Black","Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ...","$499","$599")        
+            +card-list("Beats Solo2 On Ear Headphones - Black","Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ...","$499","$599")        
+            +card-list("Beats Solo2 On Ear Headphones - Black","Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ...","$499","$599")        
+        .pagination 
+            ul.pagination__list 
+                li
+                    a(href="#" class="pagination__list--item") 1
+                li
+                    a(href="#" class="pagination__list--item") 2
+                li
+                    a(href="#" class="pagination__list--item") 3
+                li
+                    a(href="#" class="pagination__list--item") 4
+                li
+                    a(href="#" class="pagination__list--item") 5
+
+        .side-bar
+            .side-bar__box
+                include ../component/side-bar.pug
+                +box-1
+            .side-bar__box
+                include ../component/price-range.pug
+            .side-bar__box
+                span.side-bar__box--color-title COLOR
+                include ../component/box-colors.pug
+                .colors-container
+                    +boxColor("border-blue","blue")            
+                    +boxColor("border-red","red")            
+                    +boxColor("border-black","black")            
+                    +boxColor("border-yellow","yellow")            
+                    +boxColor("border-pink","pink")            
+                    +boxColor("border-bage","bage")            
+            .side-bar__box
+                include ../component/side-bar.pug
+                +box-4
+            .side-bar__box    
+                .side-bar__btn-container
+                    button.side-bar__box--btn
+                        span.side-bar__box--btn-text MORE                       
+
+block footer 
+    include ../layout/footer.pug    

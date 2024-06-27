@@ -1,0 +1,14 @@
+.section-offer{
+    display: grid;
+    max-width: 120rem ;
+    grid-template-columns: repeat(auto-fit , 33rem);
+    margin: 0 auto;
+    gap: 3rem;
+    justify-content: center;
+    margin-bottom: 12rem;
+    @include respond(vsmall-lab) { 
+        grid-template-columns: repeat(auto-fit,39rem);
+        padding: 0 2rem;
+
+    }
+}

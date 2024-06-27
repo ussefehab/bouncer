@@ -1,0 +1,9 @@
+mixin banner(h3,p,img,h3Cls,pCls,className)   
+    div(class=`${className}`)
+        .section-banner__text
+            h3(class=`${h3Cls}`) #{h3}
+            p(class=`${pCls}`) #{p}
+            a(href="#" class="section-banner__link") shop now
+        .section-banner__img 
+            img(src=`${img}`  class="section-banner__img--photo")    
+

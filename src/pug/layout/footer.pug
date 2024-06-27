@@ -1,0 +1,48 @@
+include ../component/footer_list.pug
+footer
+        .footer__horizontal-1
+        .footer 
+            .footer__item-1
+                img(src="../../../dist/imgs/logo.svg" class="footer__item-1--logo")
+                p.footer__text Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever.Since the 1500s, when an unknown printer.
+
+            .footer__item-2
+                h5.fifth--heading Follow us
+                p.footer__text  Since the 1500s, when an unknown printer took a galley of type and scrambled.
+                ul.follow--list
+                    li.follow--list--icon 
+                        a(href="https://www.facebook.com/" target="_blank")
+                            img(src="../../../dist/imgs/fb.svg")
+                    li 
+                        a(href="https://www.twitter.com/" target="_blank" )
+                            img(src="../../../dist/imgs/tw.svg")
+            .footer__item-3
+                h5.fifth--heading Contact Us
+                ul.lists
+                    li 
+                        p.footer__text  My Company , 4578 Marmora Road, Glasgow D04 89GR 
+                    li 
+                        p.footer__text  Call us now: 0123-456-789
+                    li 
+                        a(href="mailto:support@whatever.com" class="email") Email:support@whatever.com
+
+            .footer__horizontal-2
+
+            +footerList('Information','footer__item-4','About us','Information','Privacy Policy','Terms and Conditions')
+            +footerList('Service','footer__item-5','About us','Information','Privacy Policy','Terms and Conditions')
+            +footerList('Extras','footer__item-6','About us','Information','Privacy Policy','Terms and Conditions')
+            +footerList('My Account','footer__item-7','About us','Information','Privacy Policy','Terms and Conditions')
+            +footerList('Userful Links','footer__item-8','About us','Information','Privacy Policy','Terms and Conditions')
+            +footerList('Our Offers','footer__item-9','About us','Information','Privacy Policy','Terms and Conditions')
+
+        .footer__horizontal-3
+
+        .footer__copyright 
+                p.footer__copyright--text &copy; 2018 Ecommerce theme by www.bisenbaev.com
+                .footer__copyright--payments         
+                    img(src="../../../dist/imgs/Western-union.jpg" class="footer__copyright--photo")
+                    img(src="../../../dist/imgs/Group-19.jpg" class="footer__copyright--photo")
+                    img(src="../../../dist/imgs/Paypal.jpg" class="footer__copyright--photo")
+                    img(src="../../../dist/imgs/visa.jpg" class="footer__copyright--photo")
+
+                        

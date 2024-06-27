@@ -1,0 +1,12 @@
+.offer{
+    display: flex;
+    flex-direction: column;
+
+    &__img{
+        width: 6.9rem;
+        height: 4.5rem;
+        display: block;
+        align-self: center;
+        margin-bottom: 2.4rem;
+    }
+}

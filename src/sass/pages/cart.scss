@@ -1,0 +1,158 @@
+.cart-container{
+    max-width:117rem;
+    margin: 0 auto;
+    margin-bottom: 10rem;
+    @include respond (small-lab){
+       margin: 0 5rem 10rem 5rem;
+    } 
+    @include respond (phone){
+        margin: 0 2rem 10rem 2rem;
+     } 
+     @include respond (sphone){
+        margin-right: 0 .5rem 10rem .5rem;
+     } 
+}
+.carthead {
+    display: grid;
+    grid-template-columns: 5.2fr 1fr 1.3fr 1fr  ;
+    gap: 2rem;
+    border-bottom: 2px solid $color-gray--light;
+    padding: 0 0 2rem 4rem ;
+    @include respond (tab-port){
+        grid-template-columns: 3.7fr 1fr 1.3fr 1fr ;
+     } 
+     @include respond (phone){
+        grid-template-columns: 2.1fr .5fr .8fr 1fr  ;
+        gap: 1rem;
+     } 
+     @include respond (sphone){
+        grid-template-columns: 3fr .5fr .8fr 1fr  ;
+     } 
+    span{
+        font-size: 1.8rem;
+        font-family: proxima sb;
+        color: $color-black-light;
+        @include respond (sphone){
+            font-size: 1.4rem;
+        } 
+    }
+}
+.cart-product {
+    display: grid;
+    grid-template-columns: 5.5fr 1fr 1.3fr 1fr ;
+    gap: 2rem;
+    border-bottom: 2px solid $color-gray--light;
+    padding: 4rem 0 4rem 0 ;
+    align-items: center;
+    @include respond (tab-port){
+        grid-template-columns: 4fr 1fr 1.3fr 1fr ;
+     } 
+     @include respond (phone){
+        grid-template-columns: 2.4fr .5fr .8fr 1fr  ;
+        gap: 1rem;
+     } 
+     @include respond (sphone){
+        grid-template-columns: 3fr .5fr .8fr .8fr  ;
+
+     } 
+    span{
+        font-size: 1.6rem;
+        font-family: proxima nova;
+    }
+    &__close{
+        width: 2.2rem;
+        height: 2.2rem;
+        background-color: rgba($color-secondary, $alpha: .05);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     
+    }
+    &__img{
+        margin-right: 2rem;
+        width: 10rem;
+        @include respond (phone){
+            margin-right: 1rem;
+        } 
+        @include respond (sphone){
+            margin-right: .5rem;
+         } 
+        &-img{
+            width: 100%;
+        }
+    }
+    &__product{
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+        @include respond (phone){
+            gap: 2rem;
+        } 
+        @include respond (sphone){
+            margin-right: 1rem;
+         } 
+        span{
+            font-size: 1.6rem;
+            font-family: proxima sb;
+            color: $color-black-light;
+            @include respond (sphone){
+                font-size: 1.2rem;
+             } 
+        }
+    }
+}
+.cart-total   {
+    display: flex;
+    justify-content: space-between;
+    max-width: 117rem;
+    margin: 0 auto;
+    margin-bottom: 15rem;
+    @include respond (small-lab){
+        margin: 0 5rem 15rem 5rem;
+     } 
+     @include respond (tab-port){
+        flex-direction: column;
+        gap: 10rem;
+        align-items: center;
+     } 
+    &__price {
+        width: 37rem;
+        &--subTotal{
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 2rem;
+            span{
+                font-size: 1.6rem;
+                font-family: proxima nova;
+                color: $color-black-light;
+            }
+        }
+        &--total{
+            margin-top: 2rem;
+            span{
+                font-size: 3rem;
+                font-family: proxima sb;
+                color: $color-black-light;
+            }
+        }
+        &--coupon{
+            border-bottom: 2px solid $color-gray--light;
+        }
+        button{
+            width: 100%;
+            border: none;
+            background: none;
+            color: $color-white;
+            background-color: $color-primary;
+            font-family: proxima sb;
+            font-size: 1.6rem;
+            padding: 2rem;
+            border-radius: 7px;
+        }
+    }
+}
+.cart-voucher{
+    position: relative;
+    max-width: 40rem;
+}

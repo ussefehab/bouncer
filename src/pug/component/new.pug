@@ -1,0 +1,7 @@
+mixin new(img,date,heading,paragraph)
+    .section-new 
+        img(src= `${img}` class="section-new__img")
+        .section-new__content
+            span.section-new__content--date #{date}
+            h3.section-new__content--heading #{heading}
+            p.section-new__content--paragraph #{paragraph}   

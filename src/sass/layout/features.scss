@@ -1,0 +1,23 @@
+.section-feature{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-bottom: 12rem;
+    max-width: 120rem;
+
+
+    &__features{
+        margin-top: 2rem;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit,37rem);
+        max-width: 120rem;
+        gap: 4rem;
+        @include respond(vsmall-lab) { 
+            grid-template-columns: repeat(auto-fit,39rem);
+            padding: 0 2rem;
+    
+        }
+    }
+
+}

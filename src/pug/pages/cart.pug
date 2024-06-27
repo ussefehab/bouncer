@@ -1,0 +1,60 @@
+extend ../base/base.pug
+include ../component/card.pug
+block header
+    .header-container   
+        include ../component/headers.pug
+        include ../component/nav_bar.pug
+block breadcrumbs    
+    include ../component/breadcrumbs.pug
+block cart 
+    .cart-container
+        .carthead   
+            span Product 
+            span Price
+            span QTY 
+            span Unit Price   
+        .cart-product
+            .cart-product__product
+                .cart-product__close 
+                    img(src="../../../dist/imgs/x.svg", alt="product-cart-close" class="cart-product__close-btn")
+                .cart-product__img  
+                    img(src="../../../dist/imgs/hpss.jpg" class="cart-product__img-img")
+                span Philips Hue 7W BR30 Connected Downlight Lamp 
+            span $998
+            include ../component/counter.pug
+            +counter()
+            span $499
+        .cart-product
+            .cart-product__product
+                .cart-product__close 
+                    img(src="../../../dist/imgs/x.svg", alt="product-cart-close" class="cart-product__close-btn")
+                .cart-product__img  
+                    img(src="../../../dist/imgs/card-img.svg" class="cart-product__img-img")
+                span Philips Hue 7W BR30 Connected Downlight Lamp 
+            span $998
+            include ../component/counter.pug
+            +counter()
+            span $499
+    .cart-total   
+        .cart-voucher
+            form.pop-up__content--email
+                input(type="text" name="text" class="email__field" placeholder="Voucher code")
+                button(type="submit" class="search__btn")
+                    span Redeem     
+        .cart-total__price 
+            .cart-total__price--subTotal 
+                span Subtotal
+                span $1996
+            .cart-total__price--subTotal
+                span Shipping Fee
+                span $20
+            .cart-total__price--subTotal.cart-total__price--coupon
+                span Coupon 
+                span No
+            .cart-total__price--subTotal.cart-total__price--total 
+                span TOTAL 
+                span $2016
+            button Check out    
+                        
+block footer 
+    include ../layout/footer.pug        

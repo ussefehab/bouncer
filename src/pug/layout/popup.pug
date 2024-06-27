@@ -1,0 +1,17 @@
+#overlay
+.pop-up
+    .pop-up__content 
+        h1.pop-up__content--heading Newsletter
+        span.pop-up__content--text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+        .pop-up__email--container    
+            form.pop-up__content--email
+                input(type="email" name="email" class="email__field" placeholder="email")
+                button(type="submit" class="search__btn")
+                    span subscribe 
+        form(action="/submit" method="POST" class="pop-up__check")
+            input(type="checkbox" name="checked" class="pop-up__check--box" id="neverShow")
+            label(for="checked" class="pop-up__check--label") Don’t show this popup again
+    .pop-up__img
+        img(src="../../../dist/imgs/img-pop.jpg" class="pop-up__img--gift")
+    button.pop-up__btn-close    
+        span ✖

@@ -1,0 +1,94 @@
+
+//////
+@font-face {
+    font-family: proxima nova;
+    src: url(../../../dist/fonts/Demo_Fonts/Proxima/ProximaNova-Regular.otf);
+}
+@font-face {
+    font-family: proxima sb;
+    src: url(../../../dist/fonts/Demo_Fonts/Proxima/Proxima-Nova-Semibold.otf);
+}
+@font-face {
+    font-family: proxima b;
+    src: url(../../../dist/fonts/Demo_Fonts/Proxima/Proxima-Nova-Bold.otf);
+}
+@font-face {
+    font-family: proxima th;
+    src: url(../../../dist/fonts/Demo_Fonts/Proxima/Proxima-Nova-Thin.otf);
+}
+@font-face {
+    font-family: proxima li;
+    src: url(../../../dist/fonts/Demo_Fonts/Proxima/Proxima-Nova-Alt-Light.otf);
+}
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: proxima nova;
+}
+html{
+    font-size: 62.5%;
+    @include respond(tab-land) { 
+        font-size: 56.25%; 
+    }
+
+    @include respond(tab-port) { 
+        font-size: 50%; 
+    }
+    @include respond(small-tab) { 
+        font-size: 45%;
+      }
+    }
+body{
+    box-sizing: border-box;
+    position: relative;
+
+    }
+.header-container{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: $color-white;
+    z-index: 555555555;
+    opacity: .95;
+}    
+.menu {
+    display: none;
+    border: none;
+    background: none;
+    margin-right: 2rem;
+    z-index: 10000000000;
+    &__svg{
+        width: 3rem;
+        height: 3rem;
+        fill: $color-black-light;
+    }
+    @include respond (tab-port){
+        display: flex;
+     } 
+}
+
+
+::-webkit-scrollbar{
+    width: 1rem;
+}
+::-webkit-scrollbar-track{
+    background-color: $color-black-light;
+}
+::-webkit-scrollbar-thumb{
+    background-color: $color-primary;
+    border-radius: .2rem;
+}
+
+
+
+
+
+
+
+
+
+
+

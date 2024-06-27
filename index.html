@@ -1,0 +1,518 @@
+<!DOCTYPE html >
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>BOUNCER</title>
+    <link href="../../../dist/css/styles.min.css" rel="stylesheet"/>
+    <script src="../../../src/js/logic/scripts.js" defer="defer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+  </head>
+  <body>
+    <div class="header-container">  
+      <div class="header">
+        <ul class="header__item-1">
+          <li class="menu__open">
+            <button class="menu"> 
+              <svg class="menu__svg">
+                <use xlink:href="../../../dist/sprite3.svg#icon-lines"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="menu__close">
+            <button class="menu"> <span>✖</span></button>
+          </li>
+          <li class="header__item"><a class="header__profile" href="#">EN 
+              <svg class="header__arrow">
+                <use xlink:href="../../../dist/sprite.svg#icon-triangle-down"></use>
+              </svg></a></li>
+          <li class="header__item"><a class="header__profile" href="#">USD 
+              <svg class="header__arrow">
+                <use xlink:href="../../../dist/sprite.svg#icon-triangle-down"></use>
+              </svg></a></li>
+        </ul>
+        <ul class="header__item-2">
+          <li class="mdm"><a class="header__profile alignv" href="#"> 
+              <svg class="header__icon sm">
+                <use xlink:href="../../../dist/sprite.svg#icon-user-o"></use>
+              </svg><span>My profile     </span></a></li>
+          <li class="header__item mdm display"><a class="header__profile alignv" href="#" id="cart-link"> 
+              <svg class="header__icon sm">
+                <use xlink:href="../../../dist/sprite.svg#icon-basket"></use>
+              </svg><span class="sm">0 items</span><span class="smt price">$ 0.00    </span></a></li>
+          <li class="header__item">
+            <button class="search-btn"> 
+              <svg class="header__icon">
+                <use xlink:href="../../../dist/sprite.svg#icon-magnifying-glass"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <ul class="header__mobile">  
+        <li class="smb"><a class="header__profile alignv" href="#"> 
+            <svg class="header__icon sm">
+              <use xlink:href="../../../dist/sprite.svg#icon-user-o"></use>
+            </svg><span>My profile </span></a></li>
+        <li class="nav__li">
+          <div class="mega">   <a class="nav__item Home" href="#Home">Home  
+              <svg class="header__arrow">
+                <use xlink:href="../../../dist/sprite.svg#icon-triangle-down">              </use>
+              </svg></a>
+            <div class="header__mobile-mega hidden">
+              <p class="heading--three header__mobile--category" id="category-1">Category
+                <svg class="header__arrow">
+                  <use xlink:href="../../../dist/sprite.svg#icon-triangle-down"></use>
+                </svg>
+              </p>
+              <ul class="header__mobile--list hidden" id="list-1">
+                <li><a class="header__mobile--link" href="index.html">AirPort &amp; Wireless</a></li>
+                <li><a class="header__mobile--link" href="index.html">AppleCare</a></li>
+                <li><a class="header__mobile--link" href="index.html">Bags, Shells &amp; Sleeves</a></li>
+                <li><a class="header__mobile--link" href="index.html">Business &amp; Security</a></li>
+                <li><a class="header__mobile--link" href="index.html">Cables &amp; Docks</a></li>
+                <li><a class="header__mobile--link" href="index.html">Cameras &amp; Video</a></li>
+                <li><a class="header__mobile--link" href="index.html">Car &amp; Travel</a></li>
+                <li><a class="header__mobile--link" href="index.html">Cases &amp; Films</a></li>
+              </ul>
+            </div>
+            <div class="header__mobile-mega hidden">
+              <p class="heading--three header__mobile--category" id="category-2">Category
+                <svg class="header__arrow">
+                  <use xlink:href="../../../dist/sprite.svg#icon-triangle-down"></use>
+                </svg>
+              </p>
+              <ul class="header__mobile--list hidden" id="list-2">
+                <li><a class="header__mobile--link" href="index.html">Charging Devices</a></li>
+                <li><a class="header__mobile--link" href="index.html">Connected Home</a></li>
+                <li><a class="header__mobile--link" href="index.html">Device Care</a></li>
+                <li><a class="header__mobile--link" href="index.html">Display &amp; Graphic</a></li>
+                <li><a class="header__mobile--link" href="index.html">Fitness &amp; Sport</a></li>
+                <li><a class="header__mobile--link" href="index.html">Headphones</a></li>
+                <li><a class="header__mobile--link" href="index.html">HealhKit</a></li>
+              </ul>
+            </div>
+            <div class="header__mobile-mega hidden">
+              <p class="heading--three header__mobile--category" id="category-3">Category
+                <svg class="header__arrow">
+                  <use xlink:href="../../../dist/sprite.svg#icon-triangle-down"></use>
+                </svg>
+              </p>
+              <ul class="header__mobile--list hidden" id="list-3">
+                <li><a class="header__mobile--link" href="index.html">Mice &amp; Keyboards</a></li>
+                <li><a class="header__mobile--link" href="index.html">Music Creation</a></li>
+                <li><a class="header__mobile--link" href="index.html">Networking &amp; Server</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="nav__li"><a class="nav__item" href="#Store">Store  </a>
+        </li>
+        <li class="nav__li"><a class="nav__item" href="#Iphone">Iphone  </a>
+        </li>
+        <li class="nav__li"><a class="nav__item" href="#Ipad">Ipad  </a>
+        </li>
+        <li class="nav__li"><a class="nav__item" href="#Macbook">Macbook  </a>
+        </li>
+        <li class="nav__li"><a class="nav__item products-link" href="#">Accessories</a>
+        </li>
+      </ul>
+      <nav class="nav"> <img class="nav__logo" src="../../../dist/imgs/logo-main.jpg"/>
+        <ul class="nav__list">
+          <li class="nav__li"><a class="nav__item" href="#Home">Home</a>
+            <div class="nav__mega-menu">
+              <div class="nav__mega-menu-content">
+                <div class="nav__mega-menu--column">
+                  <p class="heading--three">Category</p>
+                  <ul class="nav__mega-menu--list">
+                    <li><a class="nav__item" href="#">AirPort &amp; Wireless</a></li>
+                    <li><a class="nav__item" href="#">AppleCare</a></li>
+                    <li><a class="nav__item" href="#">Bags, Shells &amp; Sleeves</a></li>
+                    <li><a class="nav__item" href="#">Business &amp; Security</a></li>
+                    <li><a class="nav__item" href="#">Cables &amp; Docks</a></li>
+                  </ul>
+                </div>
+                <div class="nav__mega-menu--column">
+                  <p class="heading--three"></p>
+                  <ul class="nav__mega-menu--list">
+                    <li><a class="nav__item" href="#">Cameras &amp; Video</a></li>
+                    <li><a class="nav__item" href="#">Car &amp; Travel</a></li>
+                    <li><a class="nav__item" href="#">Cases &amp; Films</a></li>
+                  </ul>
+                </div>
+                <div class="nav__mega-menu--column">
+                  <p class="heading--three">Category</p>
+                  <ul class="nav__mega-menu--list">
+                    <li><a class="nav__item" href="#">Charging Devices</a></li>
+                    <li><a class="nav__item" href="#">Connected Home</a></li>
+                    <li><a class="nav__item" href="#">Device Care</a></li>
+                    <li><a class="nav__item" href="#">Display &amp; Graphic</a></li>
+                    <li><a class="nav__item" href="#">Fitness &amp; Sport</a></li>
+                  </ul>
+                </div>
+                <div class="nav__mega-menu--column">
+                  <p class="heading--three"></p>
+                  <ul class="nav__mega-menu--list">
+                    <li><a class="nav__item" href="#">Headphones</a></li>
+                    <li><a class="nav__item" href="#">HealhKit</a></li>
+                  </ul>
+                </div>
+                <div class="nav__mega-menu--column">
+                  <p class="heading--three">Category</p>
+                  <ul class="nav__mega-menu--list">
+                    <li><a class="nav__item" href="#">Mice &amp; Keyboards</a></li>
+                    <li><a class="nav__item" href="#">Music Creation</a></li>
+                    <li><a class="nav__item" href="#">Networking &amp; Server</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav__li"><a class="nav__item" href="#Store">Store</a>
+          </li>
+          <li class="nav__li"><a class="nav__item" href="#Iphone">Iphone</a>
+          </li>
+          <li class="nav__li"><a class="nav__item" href="#Ipad">Ipad</a>
+          </li>
+          <li class="nav__li"><a class="nav__item" href="#Macbook">Macbook</a>
+          </li>
+          <li class="nav__li"><a class="nav__item products-link" href="#">Accessories</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <main>    
+      <section class="carousel">
+        <svg class="arrow-left">
+          <use xlink:href="../../../dist/sprite2.svg#icon-chevron-thin-left">  </use>
+        </svg>
+        <svg class="arrow-right">
+          <use xlink:href="../../../dist/sprite2.svg#icon-chevron-thin-right">        </use>
+        </svg>
+        <div class="carousel__flex"> 
+          <div class="carousel__text">
+            <h2 class="heading--secondry">iPhone X</h2>
+            <p class="carousel__text--paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p><a class="btn-link" href="#">MORE</a>
+          </div>
+          <div class="carousel__photo"> <img class="carousel__photo--img" src="../../../dist/imgs/iphonex.svg"/></div>
+        </div>
+        <div class="carousel__flex"> 
+          <div class="carousel__text">
+            <h2 class="heading--secondry">iPhone 6s</h2>
+            <p class="carousel__text--paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p><a class="btn-link" href="#">MORE</a>
+          </div>
+          <div class="carousel__photo"> <img class="carousel__photo--img" src="../../../dist/imgs/iphone6s_d.svg"/></div>
+        </div>
+      </section>
+      <section class="banners"> 
+        <figure class="figure-1"> <img class="figure-1__img" src="../../../dist/imgs/iphone6s.svg"/>
+          <figureCaption class="figure-1__caption"> 
+            <h2 class="figure-1__caption--heading">iPhone 6</h2>
+            <p class="figure-1__caption--paragraph">Lorem Ipsum dolor sit amet, consectetur adipiscing elit, labor</p><span class="figure-1__caption--price">$399</span>
+          </figureCaption>
+        </figure>
+        <figure class="figure-2"> <img class="figure-2__img" src="../../../dist/imgs/Oculus.svg"/>
+          <figureCaption class="figure-2__caption"> 
+            <h2 class="figure-2__caption--heading">Oculus Rift</h2><span class="figure-2__caption--price">$349</span>
+          </figureCaption>
+        </figure>
+                <figure class="figure-3"> 
+                  <figureCaption class="figure-3__caption">
+                    <h2 class="figure-3__caption--heading">GoPro Hero 6</h2>
+                    <p class="figure-3__caption--paragraph">Lorem Ipsum dolor sit amet, consectetur adipiscing elit, labor</p><span class="figure-3__caption--price ">$299</span>
+                  </figureCaption><img class="figure-3__img" src="../../../dist/imgs/gopro.svg"/>
+                </figure>
+      </section>
+      <div class="best-seller"> 
+        <h2 class="best-seller__heading">BEST SELLER</h2>
+              <nav>
+                <ul class="best-seller__nav--list">
+                  <li class="best-seller__nav--li"><a class="best-seller__nav--item" href="#All">All</a></li>
+                  <li class="best-seller__nav--li"><a class="best-seller__nav--item" href="#Mac">Mac</a></li>
+                  <li class="best-seller__nav--li"><a class="best-seller__nav--item" href="#Iphone">Iphone</a></li>
+                  <li class="best-seller__nav--li"><a class="best-seller__nav--item" href="#Ipad">Ipad</a></li>
+                  <li class="best-seller__nav--li"><a class="best-seller__nav--item" href="#Macbook">Macbook</a></li>
+                  <li class="best-seller__nav--li"><a class="best-seller__nav--item" href="#Accessories">Accessories</a></li>
+                </ul>
+              </nav>
+        <div class="best-seller__grid">
+                <div class="card card__hot ">
+                  <div class="card__img-container"><img class="card__img" src="../../../dist/imgs/card-img.svg"/></div>
+                  <div class="card__hover"><a id="">        <img class="card__hover--heart" src="../../../dist/imgs/hearts.svg"/></a><a class="product-link-i" href="#">   <img class="card__hover--cart" src="../../../dist/imgs/cart_2.svg"/></a></div>
+                        <div class=" card__info"> <span class="card__title">Apple Macbook Pro</span>
+                                <div class="card__rate ssmb"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+                                <div class="card__price--container"><span class="card__price">$499 </span>
+                                  <del class="card__price--del">$599</del>
+                                </div>
+                        </div>
+                </div>
+                <div class="card  ">
+                  <div class="card__img-container"><img class="card__img" src="../../../dist/imgs/card-img.svg"/></div>
+                  <div class="card__hover"><a id="">        <img class="card__hover--heart" src="../../../dist/imgs/hearts.svg"/></a><a class="product-link-i" href="#">   <img class="card__hover--cart" src="../../../dist/imgs/cart_2.svg"/></a></div>
+                        <div class=" card__info"> <span class="card__title">Apple Macbook Pro</span>
+                                <div class="card__rate ssmb"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+                                <div class="card__price--container"><span class="card__price">$499 </span>
+                                  <del class="card__price--del">$599</del>
+                                </div>
+                        </div>
+                </div>
+                <div class="card  ">
+                  <div class="card__img-container"><img class="card__img" src="../../../dist/imgs/card-img.svg"/></div>
+                  <div class="card__hover"><a id="">        <img class="card__hover--heart" src="../../../dist/imgs/hearts.svg"/></a><a class="product-link-i" href="#">   <img class="card__hover--cart" src="../../../dist/imgs/cart_2.svg"/></a></div>
+                        <div class=" card__info"> <span class="card__title">Apple Macbook Pro</span>
+                                <div class="card__rate ssmb"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+                                <div class="card__price--container"><span class="card__price">$499 </span>
+                                  <del class="card__price--del">$599</del>
+                                </div>
+                        </div>
+                </div>
+                <div class="card  ">
+                  <div class="card__img-container"><img class="card__img" src="../../../dist/imgs/card-img.svg"/></div>
+                  <div class="card__hover"><a id="">        <img class="card__hover--heart" src="../../../dist/imgs/hearts.svg"/></a><a class="product-link-i" href="#">   <img class="card__hover--cart" src="../../../dist/imgs/cart_2.svg"/></a></div>
+                        <div class=" card__info"> <span class="card__title">Apple Macbook Pro</span>
+                                <div class="card__rate ssmb"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+                                <div class="card__price--container"><span class="card__price">$499 </span>
+                                  <del class="card__price--del">$599</del>
+                                </div>
+                        </div>
+                </div>
+                <div class="card  ">
+                  <div class="card__img-container"><img class="card__img" src="../../../dist/imgs/card-img.svg"/></div>
+                  <div class="card__hover"><a id="">        <img class="card__hover--heart" src="../../../dist/imgs/hearts.svg"/></a><a class="product-link-i" href="#">   <img class="card__hover--cart" src="../../../dist/imgs/cart_2.svg"/></a></div>
+                        <div class=" card__info"> <span class="card__title">Apple Macbook Pro</span>
+                                <div class="card__rate ssmb"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+                                <div class="card__price--container"><span class="card__price">$499 </span>
+                                  <del class="card__price--del">$599</del>
+                                </div>
+                        </div>
+                </div>
+                <div class="card  ">
+                  <div class="card__img-container"><img class="card__img" src="../../../dist/imgs/card-img.svg"/></div>
+                  <div class="card__hover"><a id="">        <img class="card__hover--heart" src="../../../dist/imgs/hearts.svg"/></a><a class="product-link-i" href="#">   <img class="card__hover--cart" src="../../../dist/imgs/cart_2.svg"/></a></div>
+                        <div class=" card__info"> <span class="card__title">Apple Macbook Pro</span>
+                                <div class="card__rate ssmb"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+                                <div class="card__price--container"><span class="card__price">$499 </span>
+                                  <del class="card__price--del">$599</del>
+                                </div>
+                        </div>
+                </div>
+                <div class="card  ">
+                  <div class="card__img-container"><img class="card__img" src="../../../dist/imgs/card-img.svg"/></div>
+                  <div class="card__hover"><a id="">        <img class="card__hover--heart" src="../../../dist/imgs/hearts.svg"/></a><a class="product-link-i" href="#">   <img class="card__hover--cart" src="../../../dist/imgs/cart_2.svg"/></a></div>
+                        <div class=" card__info"> <span class="card__title">Apple Macbook Pro</span>
+                                <div class="card__rate ssmb"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+                                <div class="card__price--container"><span class="card__price">$499 </span>
+                                  <del class="card__price--del">$599</del>
+                                </div>
+                        </div>
+                </div>
+                <div class="card  ">
+                  <div class="card__img-container"><img class="card__img" src="../../../dist/imgs/card-img.svg"/></div>
+                  <div class="card__hover"><a id="">        <img class="card__hover--heart" src="../../../dist/imgs/hearts.svg"/></a><a class="product-link-i" href="#">   <img class="card__hover--cart" src="../../../dist/imgs/cart_2.svg"/></a></div>
+                        <div class=" card__info"> <span class="card__title">Apple Macbook Pro</span>
+                                <div class="card__rate ssmb"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+                                <div class="card__price--container"><span class="card__price">$499 </span>
+                                  <del class="card__price--del">$599</del>
+                                </div>
+                        </div>
+                </div>
+        </div>
+        <div class="best-seller__link">   <a class="best-seller__btn" href="#">Load More</a></div>
+      </div>
+            <div class="section-banner">
+              <div class="section-banner__text">
+                <h3 class="section-banner__text--heading">iPhone 6 Plus</h3>
+                <p class="section-banner__text--paragraph ">Performance and design. Taken right to the edge.</p><a class="section-banner__link" href="#">shop now</a>
+              </div>
+              <div class="section-banner__img"> <img class="section-banner__img--photo" src="../../../dist/imgs/iphone6s_d.svg"/></div>
+            </div>
+      <div class="section-offer">
+              <div class="offer"><img class="offer__img" src="../../../dist/imgs/shipping.svg"/>
+                <h3 class="offer__heading">FREE SHIPPING </h3>
+                <div class="offer__info">
+                  <p class="offer__info--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor minim veniam, quis nostrud  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                </div>
+              </div>
+              <div class="offer"><img class="offer__img" src="../../../dist/imgs/refund.svg"/>
+                <h3 class="offer__heading">100% REFUND </h3>
+                <div class="offer__info">
+                  <p class="offer__info--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor minim veniam, quis nostrud  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                </div>
+              </div>
+              <div class="offer"><img class="offer__img" src="../../../dist/imgs/support.svg"/>
+                <h3 class="offer__heading">SUPPORT 24/7 </h3>
+                <div class="offer__info">
+                  <p class="offer__info--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor minim veniam, quis nostrud  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                </div>
+              </div>
+      </div>
+      <div class="section-latestNew">
+        <h2 class="section-latestNew__heading">LATEST NEWS</h2>
+        <div class="section-latestNew__list">
+                <div class="section-new"> <img class="section-new__img" src="../../../dist/imgs/rectangle-1.jpg"/>
+                  <div class="section-new__content"><span class="section-new__content--date">01 jan, 2015</span>
+                    <h3 class="section-new__content--heading">Typesetting industry</h3>
+                    <p class="section-new__content--paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry.   </p>
+                  </div>
+                </div>
+                <div class="section-new"> <img class="section-new__img" src="../../../dist/imgs/lab.jpg"/>
+                  <div class="section-new__content"><span class="section-new__content--date">01 jan, 2015</span>
+                    <h3 class="section-new__content--heading">Typesetting industry</h3>
+                    <p class="section-new__content--paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry.   </p>
+                  </div>
+                </div>
+                <div class="section-new"> <img class="section-new__img" src="../../../dist/imgs/mobil.jpg"/>
+                  <div class="section-new__content"><span class="section-new__content--date">01 jan, 2015</span>
+                    <h3 class="section-new__content--heading">Typesetting industry</h3>
+                    <p class="section-new__content--paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry.   </p>
+                  </div>
+                </div>
+        </div>
+      </div>
+      <div class="section-feature">
+        <h2 class="section-latestNew__heading">FEATURE PRODUCTS</h2>
+        <div class="section-feature__features">
+                <div class="feature"> 
+                  <div class="feature__img--box">    <img class="feature__img feature__img_up" src="../../../dist/imgs/headphone.svg"/></div>
+                        <div class=" card__start"> <span class="card__title">Beats Solo 2 On Ear Headphones - Black</span>
+                                <div class="card__rate undefined"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+                                <div class="card__price--container"><span class="card__price">$ 499</span>
+                                  <del class="card__price--del">$599</del>
+                                </div>
+                        </div>
+                </div>
+                <div class="feature"> 
+                  <div class="feature__img--box">    <img class="feature__img undefined" src="../../../dist/imgs/ir.svg"/></div>
+                        <div class=" card__start"> <span class="card__title">H-Squared tvTray</span>
+                                <div class="card__rate undefined"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+                                <div class="card__price--container"><span class="card__price">$ 499</span>
+                                  <del class="card__price--del">$599</del>
+                                </div>
+                        </div>
+                </div>
+                <div class="feature"> 
+                  <div class="feature__img--box">    <img class="feature__img feature__img_up" src="../../../dist/imgs/rain.svg"/></div>
+                        <div class=" card__start"> <span class="card__title">Netatmo Rain Gauge</span>
+                                <div class="card__rate undefined"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+                                <div class="card__price--container"><span class="card__price">$ 499</span>
+                                  <del class="card__price--del">$599</del>
+                                </div>
+                        </div>
+                </div>
+        </div>
+      </div>
+      <div class="search__container">   
+        <form class="search" action="search">
+          <input class="search__field" type="text" placeholder="search Query"/>
+          <button class="search__btn" type="submit"><span>Search</span></button>
+        </form>
+      </div>
+      <div id="overlay"></div>
+      <div class="pop-up">
+        <div class="pop-up__content"> 
+          <h1 class="pop-up__content--heading">Newsletter</h1><span class="pop-up__content--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</span>
+          <div class="pop-up__email--container">   
+            <form class="pop-up__content--email">
+              <input class="email__field" type="email" name="email" placeholder="email"/>
+              <button class="search__btn" type="submit"><span>subscribe </span></button>
+            </form>
+          </div>
+          <form class="pop-up__check" action="/submit" method="POST">
+            <input class="pop-up__check--box" type="checkbox" name="checked" id="neverShow"/>
+            <label class="pop-up__check--label" for="checked">Don’t show this popup again</label>
+          </form>
+        </div>
+        <div class="pop-up__img"><img class="pop-up__img--gift" src="../../../dist/imgs/img-pop.jpg"/></div>
+        <button class="pop-up__btn-close">   <span>✖</span></button>
+      </div>
+    </main>
+    <footer>
+      <div class="footer__horizontal-1"></div>
+      <div class="footer"> 
+        <div class="footer__item-1"><img class="footer__item-1--logo" src="../../../dist/imgs/logo.svg"/>
+          <p class="footer__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever.Since the 1500s, when an unknown printer.</p>
+        </div>
+        <div class="footer__item-2">
+          <h5 class="fifth--heading">Follow us</h5>
+          <p class="footer__text"> Since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+          <ul class="follow--list">
+            <li class="follow--list--icon"> <a href="https://www.facebook.com/" target="_blank"><img src="../../../dist/imgs/fb.svg"/></a></li>
+            <li> <a href="https://www.twitter.com/" target="_blank"><img src="../../../dist/imgs/tw.svg"/></a></li>
+          </ul>
+        </div>
+        <div class="footer__item-3">
+          <h5 class="fifth--heading">Contact Us</h5>
+          <ul class="lists">
+            <li> 
+              <p class="footer__text"> My Company , 4578 Marmora Road, Glasgow D04 89GR </p>
+            </li>
+            <li> 
+              <p class="footer__text"> Call us now: 0123-456-789</p>
+            </li>
+            <li> <a class="email" href="mailto:support@whatever.com">Email:support@whatever.com</a></li>
+          </ul>
+        </div>
+        <div class="footer__horizontal-2"></div>
+            <div class="footer__item-4">
+              <h5 class="fifth--heading">Information</h5>
+              <ul class="lists"> 
+                <li></li><a class="list-item" href="#">About us</a>
+                <li></li><a class="list-item" href="#">Information</a>
+                <li></li><a class="list-item" href="#">Privacy Policy</a>
+                <li></li><a class="list-item" href="#">Terms and Conditions</a>
+              </ul>
+            </div>
+            <div class="footer__item-5">
+              <h5 class="fifth--heading">Service</h5>
+              <ul class="lists"> 
+                <li></li><a class="list-item" href="#">About us</a>
+                <li></li><a class="list-item" href="#">Information</a>
+                <li></li><a class="list-item" href="#">Privacy Policy</a>
+                <li></li><a class="list-item" href="#">Terms and Conditions</a>
+              </ul>
+            </div>
+            <div class="footer__item-6">
+              <h5 class="fifth--heading">Extras</h5>
+              <ul class="lists"> 
+                <li></li><a class="list-item" href="#">About us</a>
+                <li></li><a class="list-item" href="#">Information</a>
+                <li></li><a class="list-item" href="#">Privacy Policy</a>
+                <li></li><a class="list-item" href="#">Terms and Conditions</a>
+              </ul>
+            </div>
+            <div class="footer__item-7">
+              <h5 class="fifth--heading">My Account</h5>
+              <ul class="lists"> 
+                <li></li><a class="list-item" href="#">About us</a>
+                <li></li><a class="list-item" href="#">Information</a>
+                <li></li><a class="list-item" href="#">Privacy Policy</a>
+                <li></li><a class="list-item" href="#">Terms and Conditions</a>
+              </ul>
+            </div>
+            <div class="footer__item-8">
+              <h5 class="fifth--heading">Userful Links</h5>
+              <ul class="lists"> 
+                <li></li><a class="list-item" href="#">About us</a>
+                <li></li><a class="list-item" href="#">Information</a>
+                <li></li><a class="list-item" href="#">Privacy Policy</a>
+                <li></li><a class="list-item" href="#">Terms and Conditions</a>
+              </ul>
+            </div>
+            <div class="footer__item-9">
+              <h5 class="fifth--heading">Our Offers</h5>
+              <ul class="lists"> 
+                <li></li><a class="list-item" href="#">About us</a>
+                <li></li><a class="list-item" href="#">Information</a>
+                <li></li><a class="list-item" href="#">Privacy Policy</a>
+                <li></li><a class="list-item" href="#">Terms and Conditions</a>
+              </ul>
+            </div>
+      </div>
+      <div class="footer__horizontal-3"></div>
+      <div class="footer__copyright"> 
+        <p class="footer__copyright--text">&copy; 2018 Ecommerce theme by www.bisenbaev.com</p>
+        <div class="footer__copyright--payments">        <img class="footer__copyright--photo" src="../../../dist/imgs/Western-union.jpg"/><img class="footer__copyright--photo" src="../../../dist/imgs/Group-19.jpg"/><img class="footer__copyright--photo" src="../../../dist/imgs/Paypal.jpg"/><img class="footer__copyright--photo" src="../../../dist/imgs/visa.jpg"/></div>
+      </div>
+    </footer>
+  </body>
+</html>

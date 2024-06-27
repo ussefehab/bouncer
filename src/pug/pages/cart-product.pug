@@ -1,0 +1,90 @@
+extend ../base/base.pug
+append script
+    script( src="../../../src/js/logic/card-slider.js" defer) 
+        
+include ../component/card.pug
+block header
+    .header-container   
+        include ../component/headers.pug
+        include ../component/nav_bar.pug
+block breadcrumbs    
+    include ../component/breadcrumbs.pug
+block product    
+    .product   
+        .product__information
+            .product__images
+                img(src="../../../dist/imgs/hpbig.jpg" class="product__images--img")
+                .product__images--collection 
+                    .product__images--box
+                        img(src="../../../dist/imgs/hps.jpg" class="product__images--small")
+                    .product__images--box    
+                        img(src="../../../dist/imgs/hp2.jpg" class="product__images--small")
+                    .product__images--box
+                        img(src="../../../dist/imgs/hpss.jpg" class="product__images--small")
+                    .product__images--box 
+                        img(src="../../../dist/imgs/hp3.jpg" class="product__images--small mrl")
+                        
+            .product__information--description
+                +cardTitle("Beats Solo2 On Ear Headphones - Black")
+                .card-list__content--review 
+                    +cardRate()
+                    +cardreview()
+                .card__price--container
+                    +cardPrice("$499","$599")    
+                .product__inventory 
+                    span.product__inventory--avilability  Availability:
+                    span.product__inventory--stock  In Stock
+                .product__category 
+                    span.product__inventory--avilability   Category:
+                    span.product__inventory--stock  Accesories
+                .product__shipping  
+                    span.product__inventory--avilability   Free shipping    
+                .product__color 
+                    span Select Color:
+                    include ../component/box-colors.pug
+                    .product__color--box
+                        +boxColor("border-blue","blue")            
+                        +boxColor("border-red","red")            
+                        +boxColor("border-black","black")            
+                        +boxColor("border-yellow","yellow")   
+                .product__size  
+                    span.product__size--text Size 
+                    include ../component/drop-down.pug
+                    +dropDown("XS","S","M","L","dropdown3")
+                .product__purchese    
+                    include ../component/counter.pug
+                    +counter()                
+                    +iconShopping()
+                .product__social    
+                    include ../component/social.pug
+                    +social("../../../dist/sprite5.svg#icon-facebook","Share on Facebook","social__bgColor-fb")
+                    +social("../../../dist/sprite5.svg#icon-twitter","Share on Twitter","social__bgColor-tw")
+        .best-seller-card 
+            span.best-seller-card__title BEST SELLER
+            .card-slider
+                +card("","Apple Macbook Pro","$499 ","$599","card__info","ssmb","card-slider__pos","../../../dist/imgs/card-img.svg")
+                +card("","GoPro","$299 ","$399","card__info","ssmb","card-slider__pos","../../../dist/imgs/gopro.svg")
+                +card("","Apple Macbook Pro","$499 ","$599","card__info","ssmb","card-slider__pos","../../../dist/imgs/headphone.svg")
+            .best-seller-card__slider--container    
+   
+            include ../component/gopro.pug
+            +gopro("gopro","","","gopro__paragraph","gopro__price")  
+        .product__tabs 
+            .product__tabs--tabs    
+                a(href="#" class="product__tabs--link product__tabs--link-active") Product Infomation 
+                a(href="#" class="product__tabs--link ") Reviews 
+                    span 0
+                a(href="#" class="product__tabs--link ") Another tab    
+            .product__tabs--content 
+                p Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.
+                p Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.    
+    .related 
+        h2 RELATED PRODUCTS
+        .related__products    
+            +card("","Apple Macbook Pro","$499 ","$599","card__info","ssmb","","../../../dist/imgs/card-img.svg")                          
+            +card("","Apple Macbook Pro","$499 ","$599","card__info","ssmb","","../../../dist/imgs/card-img.svg")
+            +card("","Apple Macbook Pro","$499 ","$599","card__info","ssmb","","../../../dist/imgs/card-img.svg")
+            +card("","Apple Macbook Pro","$499 ","$599","card__info","ssmb","","../../../dist/imgs/card-img.svg")
+block footer 
+    include ../layout/footer.pug    
+    

@@ -1,0 +1,67 @@
+- var navItems = ["Home","Store","Iphone","Ipad","Macbook","Accessories"]
+- var megaMenuContent = [{ title: "Category", links: ["AirPort & Wireless", "AppleCare", "Bags, Shells & Sleeves","Business & Security","Cables & Docks","Cameras & Video", "Car & Travel", "Cases & Films"],id:["category-1"],idl:["list-1"] },{ title: "Category", links: ["Charging Devices","Connected Home","Device Care","Display & Graphic","Fitness & Sport","Headphones","HealhKit"] ,id:["category-2"],idl:["list-2"]},{ title: "Category", links: ["Mice & Keyboards", "Music Creation", "Networking & Server"],id:["category-3"],idl:["list-3"] }]
+
+.header
+    ul.header__item-1
+        li.menu__open
+            button.menu 
+                svg(class="menu__svg")
+                    use(xlink:href="../../../dist/sprite3.svg#icon-lines")
+        li.menu__close
+            button.menu 
+                span ✖
+        li.header__item
+            a(href="#" class="header__profile") EN 
+                svg(class="header__arrow")
+                    use(xlink:href="../../../dist/sprite.svg#icon-triangle-down")
+        li.header__item
+            a(href="#" class="header__profile") USD 
+                svg(class="header__arrow")
+                    use(xlink:href="../../../dist/sprite.svg#icon-triangle-down")
+    ul.header__item-2
+        li.mdm
+            a(href="#" class="header__profile alignv") 
+                svg(class="header__icon sm")
+                    use(xlink:href="../../../dist/sprite.svg#icon-user-o")
+                span My profile     
+        li.header__item.mdm.display
+            a(href="#" class="header__profile alignv" id="cart-link") 
+                svg(class="header__icon sm")
+                    use(xlink:href="../../../dist/sprite.svg#icon-basket")
+                span.sm 0 items
+                span.smt.price $ 0.00    
+        li.header__item
+            button.search-btn 
+                svg(class="header__icon")
+                    use(xlink:href="../../../dist/sprite.svg#icon-magnifying-glass")
+
+ul.header__mobile   
+    li.smb
+        a(href="#" class="header__profile alignv") 
+            svg(class="header__icon sm")
+                use(xlink:href="../../../dist/sprite.svg#icon-user-o")
+            span My profile 
+    each item in navItems
+      li.nav__li
+        if item == "Accessories"
+          a.nav__item(href="#" class="products-link") #{item}
+        if item !==  "Accessories" & item !== "Home"      
+          a.nav__item(href="#"+item) #{item}  
+        if item == "Home"
+            .mega    
+                a.nav__item(href="#"+item class=`${item}`) #{item}  
+                    svg(class="header__arrow")
+                        use(xlink:href="../../../dist/sprite.svg#icon-triangle-down")               
+                each column in megaMenuContent
+                    .header__mobile-mega.hidden
+                        p(class="heading--three header__mobile--category" id=`${column.id}`)= column.title
+                            svg(class="header__arrow")
+                                use(xlink:href="../../../dist/sprite.svg#icon-triangle-down")
+                        ul(class="header__mobile--list" id=`${column.idl}`).hidden
+                            each link in column.links
+                                li
+                                    a.header__mobile--link(href="index.html") #{link}
+
+
+
+                                                

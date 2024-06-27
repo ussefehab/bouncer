@@ -1,0 +1,95 @@
+.nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0;
+    position: relative;
+    @include respond (tab-port){
+        padding: 1rem 0 0 0;
+          }
+    &__logo {
+        display: flex;
+        width: 10%;
+        margin-bottom: 2rem;
+        @include respond (tab-port){
+        width:30%;
+        margin-top: .5rem;
+          }
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        @include respond (tab-port){
+            display: none;
+        }
+    }
+
+    &__li {
+        &:not(:last-child) {
+            margin-right: 6rem;
+        }
+    }
+
+    &__item {
+        transition: all .3s;
+        text-transform: uppercase;
+        display: inline-block;
+
+        &:link,
+        &:visited {
+            text-decoration: none;
+            font-size: 1.4rem;
+            color: $color-black-light;
+            line-height: 3;
+            font-family: proxima nova;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-primary--light;
+        }
+
+        // Show mega menu on hover specifically for "Home" item
+        &[href="#Home"]:hover ~ .nav__mega-menu,
+        &[href="#Home"]:hover ~ .nav__mega-menu:hover {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__mega-menu {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+        background-color: $color-white;
+        padding: 3rem 2rem;
+        border-radius: 2px;
+        box-shadow: 0 15px 8px rgba(0, 0, 0, .08);
+        border-top: 2px solid $color-gray--light;
+        position: absolute;
+        top: 90%;
+        transform: translateX(-22.5%);
+        z-index: 1000;
+        &-content {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            column-gap: 5rem;
+        }
+
+        &--column {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 3rem 1fr;
+        }
+
+        &--list {
+            list-style: none;
+            grid-row: 2 / 3;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+- var sideBarBox1 = [{ title: "Accesories", links: ["Apple Car", "Air port & wireless", "Cables & Docks","Cases & Films","Charging Devices","Connected home","Headphones"],quantities:["2" , "48","14","15","23","1","95"]}]
+- var sideBarBox2 = [{ title: "BRANDS", links: ["Apple", "LG", "Samsung","Siemens"],quantities:["99","99","99","99"]}]
+mixin box-1     
+            each column in sideBarBox1
+                    p.side-bar__heading= column.title
+                    ul.side-bar__list
+                        each link, index in column.links
+                            li.side-bar__flex
+                                a.side-bar__link(href="#") #{link}
+                                span.side-bar__num #{column.quantities[index]}
+mixin box-4     
+            each column in sideBarBox2
+                    p.side-bar__heading= column.title
+                    ul.side-bar__list
+                        each link, index in column.links
+                            li.side-bar__flex
+                                a.side-bar__link(href="#") #{link}
+                                span.side-bar__num #{column.quantities[index]}
+

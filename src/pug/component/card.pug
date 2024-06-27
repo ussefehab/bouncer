@@ -1,0 +1,43 @@
+include ../component/card-info.pug
+mixin card(className,title,price,dis,card__info,mb,pos,img)
+    div(class=`card ${className} ${pos}`)
+        .card__img-container
+            img(src=`${img}` class="card__img")
+        .card__hover
+            a(class="" id="")         
+                img.card__hover--heart(src="../../../dist/imgs/hearts.svg" )
+            a( href="#" class="product-link-i")    
+                img.card__hover--cart(src="../../../dist/imgs/cart_2.svg")
+        +cardinfo(title,price,dis,card__info,mb)
+//-//////////////////////////// 
+mixin card-list(tl,parg,price,dis)
+    .card-list    
+        .card-list__img
+            img(src="../../../dist/imgs/card-img.svg" class="")
+        .card-list__content
+            +cardTitle(tl)
+            .card-list__content--review 
+                +cardRate("")
+                +cardreview()
+            .card__price--container
+                +cardPrice(price,dis)
+            p #{parg}
+            +iconShopping()
+          
+//- ///////////////////////
+mixin cardTitle(tl)
+    h3.card-list__content--title #{tl}
+
+mixin cardreview()
+    .card-list__content--review-reviews
+        span 0
+        span Reviews
+        button Submit a review    
+
+mixin iconShopping()
+      .card-list__content--icons 
+                .card-list__content--icons-shoping
+                    img(src="../../../dist/imgs/cart_2.svg")
+                    a(href="#" class="product-link") Add to cart
+                .card-list__content--icons-heart
+                    img(src="../../../dist/imgs/hearts.svg")

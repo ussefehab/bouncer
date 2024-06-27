@@ -1,0 +1,225 @@
+.product{
+    display: grid;
+    grid-template-columns: 3.22fr 1fr;
+    grid-template-rows: min-content min-content;
+    max-width: 112rem;
+    gap: 3rem;
+    margin: 0 auto;
+    justify-items: start;
+    margin-bottom: 5rem;
+    @include respond (tab-port){
+        margin: 0 3rem;
+
+    }
+    // justify-content: center;
+    &__information{
+        grid-column: 1/ 2;
+        grid-row: 1/ 2;
+        display: flex;
+        justify-content: left;
+        gap: 1rem;
+        width: 100%;
+        @include respond (tab-port){
+            grid-column: 1/ -1;
+        }
+        @include respond (phone){
+           flex-direction: column;
+           margin-bottom: 5rem;
+        }
+    }
+    &__images{
+        flex: 0 0 44%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: -3rem;
+        @include respond (phone){
+            margin-bottom: 5rem;
+         }
+
+        &--img{
+            width: 100%;
+            transform: scale(.90);
+            @include respond (phone){
+                width: 50%;
+             }
+        }
+        &--collection{
+            display: flex;
+            gap: 1rem;
+        }
+        &--small{
+            width:100%;
+            display: flex;
+        }
+        &--box{
+            // display: flex;
+            // align-items: center;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                box-shadow: 0 0 0 2px $color-gray-border;
+                z-index: 1; /* Place the border behind the image */
+            }
+        }
+    }
+    &__category {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1.6rem;
+    }
+    &__shipping  {
+        padding-bottom: 3rem;
+        border-bottom: $border-bottom;
+    }
+    &__color{
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
+        span{
+            margin-right: 4rem;
+            font-size: 1.4rem;
+            font-family: proxima b;
+        }
+        &--box{
+            display: flex;
+            gap: 1rem;
+        }
+    }
+    &__size{
+        display: flex;
+        align-items: center;
+        gap: 10rem;
+        margin-top: 2.4rem;
+        padding-bottom: 2rem;
+        border-bottom: $border-bottom;
+        &--text{
+            font-size: 1.4rem;
+            font-family: proxima b;
+        }
+    }  
+    &__purchese {
+        display: flex;
+        padding: 1.5rem 0;
+        border-bottom: $border-bottom;
+        justify-content: space-between;
+    }
+    &__social{
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.4rem;
+        margin-bottom: 3rem;
+    }
+    &__tabs{
+        grid-column: 1/ 2;
+        grid-row: 2/ 3;
+        background-color: $color-gray--light;
+        border-radius: 7px;
+        width: 100%;
+        @include respond (tab-port){
+            grid-column: 1/ -1;
+            margin-bottom: 3rem;
+        }
+        &--tabs{
+            height: 8rem;
+            display: flex;
+            gap: 4rem;
+            border-bottom: 3px solid rgba($color-gray, $alpha: .2);
+            padding: 0 2rem 0 2rem;
+
+            span{
+                color: $color-gray;
+                margin-left: 1rem;
+        }
+    }
+}
+}
+.best-seller-card {
+    grid-column: 2/ 3;
+    grid-row: 1/ 3;
+    display: flex;
+    flex-direction: column;
+    @include respond (tab-port){
+        grid-column: 1/ 3;
+        grid-row: 3/ 4;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(auto-fit , min-content);
+        width: 100%;
+        margin-bottom: 5rem;
+    }
+    @include respond (sphone){
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fit ,auto-fit);
+        &-slider{
+            grid-column: 1/ 2;
+            grid-row: 2/ 3;
+        }
+    }
+
+    &__slider {
+        width: 10%;
+        height: .3rem;
+        background-color: rgba($color-gray, $alpha: .2);
+
+        &--container{
+            @include respond (sphone){
+                grid-column: 1/ 2;
+                grid-row: 3/ 4;
+            }
+            margin-top: 1.6rem;
+            margin-bottom: 3rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+        &--active{
+            background-color: $color-primary;
+        }
+    }
+}
+.gopro{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    background-color: $color-gray;
+    padding: 3rem 2rem;
+    width: 27rem;
+    z-index: 150;
+    img{
+        display: inline-block;
+        width: 100%;
+    }
+    @include respond (tab-port){
+        grid-column: 2/ 3;
+        grid-row: 2/ 3;
+        justify-self: center;
+    }
+
+    @include respond (sphone){
+        grid-column: 1/ 2;
+        grid-row: 4/ 5;
+    }
+
+}
+.card-slider{
+    position: relative;
+    height: 35rem;
+    width: 27rem;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    &__pos{
+        position: absolute;
+        top: 0;
+    }
+}

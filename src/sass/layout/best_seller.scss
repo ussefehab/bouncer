@@ -1,0 +1,39 @@
+.best-seller{
+    margin-bottom: 10rem;
+
+    &__grid{
+        max-width: 120rem;
+        margin: 0 auto;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, 27rem);
+        gap: 2rem;
+        margin-bottom: 5rem;
+        @include respond(vsmall-lab) { 
+            margin: 0 ;
+            margin-bottom: 5rem;
+
+        }
+    }
+    &__nav--list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        margin-bottom: 3rem;
+    }
+
+    &__nav--li {
+        &:not(:last-child) {
+            margin-right: 4rem;
+            @include respond (phone){
+              margin-right: 2rem;
+            }
+        }
+
+    }
+    &__link{
+        text-align: center;
+    }
+}
+

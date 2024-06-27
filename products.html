@@ -1,0 +1,781 @@
+<!DOCTYPE html >
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>BOUNCER</title>
+    <link href="../../../dist/css/styles.min.css" rel="stylesheet"/>
+    <script src="../../../src/js/logic/scripts.js" defer="defer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+  </head>
+  <body>
+    <div class="header-container">  
+      <div class="header">
+        <ul class="header__item-1">
+          <li class="menu__open">
+            <button class="menu"> 
+              <svg class="menu__svg">
+                <use xlink:href="../../../dist/sprite3.svg#icon-lines"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="menu__close">
+            <button class="menu"> <span>✖</span></button>
+          </li>
+          <li class="header__item"><a class="header__profile" href="#">EN 
+              <svg class="header__arrow">
+                <use xlink:href="../../../dist/sprite.svg#icon-triangle-down"></use>
+              </svg></a></li>
+          <li class="header__item"><a class="header__profile" href="#">USD 
+              <svg class="header__arrow">
+                <use xlink:href="../../../dist/sprite.svg#icon-triangle-down"></use>
+              </svg></a></li>
+        </ul>
+        <ul class="header__item-2">
+          <li class="mdm"><a class="header__profile alignv" href="#"> 
+              <svg class="header__icon sm">
+                <use xlink:href="../../../dist/sprite.svg#icon-user-o"></use>
+              </svg><span>My profile     </span></a></li>
+          <li class="header__item mdm display"><a class="header__profile alignv" href="#" id="cart-link"> 
+              <svg class="header__icon sm">
+                <use xlink:href="../../../dist/sprite.svg#icon-basket"></use>
+              </svg><span class="sm">0 items</span><span class="smt price">$ 0.00    </span></a></li>
+          <li class="header__item">
+            <button class="search-btn"> 
+              <svg class="header__icon">
+                <use xlink:href="../../../dist/sprite.svg#icon-magnifying-glass"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <ul class="header__mobile">  
+        <li class="smb"><a class="header__profile alignv" href="#"> 
+            <svg class="header__icon sm">
+              <use xlink:href="../../../dist/sprite.svg#icon-user-o"></use>
+            </svg><span>My profile </span></a></li>
+        <li class="nav__li">
+          <div class="mega">   <a class="nav__item Home" href="#Home">Home  
+              <svg class="header__arrow">
+                <use xlink:href="../../../dist/sprite.svg#icon-triangle-down">              </use>
+              </svg></a>
+            <div class="header__mobile-mega hidden">
+              <p class="heading--three header__mobile--category" id="category-1">Category
+                <svg class="header__arrow">
+                  <use xlink:href="../../../dist/sprite.svg#icon-triangle-down"></use>
+                </svg>
+              </p>
+              <ul class="header__mobile--list hidden" id="list-1">
+                <li><a class="header__mobile--link" href="index.html">AirPort &amp; Wireless</a></li>
+                <li><a class="header__mobile--link" href="index.html">AppleCare</a></li>
+                <li><a class="header__mobile--link" href="index.html">Bags, Shells &amp; Sleeves</a></li>
+                <li><a class="header__mobile--link" href="index.html">Business &amp; Security</a></li>
+                <li><a class="header__mobile--link" href="index.html">Cables &amp; Docks</a></li>
+                <li><a class="header__mobile--link" href="index.html">Cameras &amp; Video</a></li>
+                <li><a class="header__mobile--link" href="index.html">Car &amp; Travel</a></li>
+                <li><a class="header__mobile--link" href="index.html">Cases &amp; Films</a></li>
+              </ul>
+            </div>
+            <div class="header__mobile-mega hidden">
+              <p class="heading--three header__mobile--category" id="category-2">Category
+                <svg class="header__arrow">
+                  <use xlink:href="../../../dist/sprite.svg#icon-triangle-down"></use>
+                </svg>
+              </p>
+              <ul class="header__mobile--list hidden" id="list-2">
+                <li><a class="header__mobile--link" href="index.html">Charging Devices</a></li>
+                <li><a class="header__mobile--link" href="index.html">Connected Home</a></li>
+                <li><a class="header__mobile--link" href="index.html">Device Care</a></li>
+                <li><a class="header__mobile--link" href="index.html">Display &amp; Graphic</a></li>
+                <li><a class="header__mobile--link" href="index.html">Fitness &amp; Sport</a></li>
+                <li><a class="header__mobile--link" href="index.html">Headphones</a></li>
+                <li><a class="header__mobile--link" href="index.html">HealhKit</a></li>
+              </ul>
+            </div>
+            <div class="header__mobile-mega hidden">
+              <p class="heading--three header__mobile--category" id="category-3">Category
+                <svg class="header__arrow">
+                  <use xlink:href="../../../dist/sprite.svg#icon-triangle-down"></use>
+                </svg>
+              </p>
+              <ul class="header__mobile--list hidden" id="list-3">
+                <li><a class="header__mobile--link" href="index.html">Mice &amp; Keyboards</a></li>
+                <li><a class="header__mobile--link" href="index.html">Music Creation</a></li>
+                <li><a class="header__mobile--link" href="index.html">Networking &amp; Server</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="nav__li"><a class="nav__item" href="#Store">Store  </a>
+        </li>
+        <li class="nav__li"><a class="nav__item" href="#Iphone">Iphone  </a>
+        </li>
+        <li class="nav__li"><a class="nav__item" href="#Ipad">Ipad  </a>
+        </li>
+        <li class="nav__li"><a class="nav__item" href="#Macbook">Macbook  </a>
+        </li>
+        <li class="nav__li"><a class="nav__item products-link" href="#">Accessories</a>
+        </li>
+      </ul>
+      <nav class="nav"> <img class="nav__logo" src="../../../dist/imgs/logo-main.jpg"/>
+        <ul class="nav__list">
+          <li class="nav__li"><a class="nav__item" href="#Home">Home</a>
+            <div class="nav__mega-menu">
+              <div class="nav__mega-menu-content">
+                <div class="nav__mega-menu--column">
+                  <p class="heading--three">Category</p>
+                  <ul class="nav__mega-menu--list">
+                    <li><a class="nav__item" href="#">AirPort &amp; Wireless</a></li>
+                    <li><a class="nav__item" href="#">AppleCare</a></li>
+                    <li><a class="nav__item" href="#">Bags, Shells &amp; Sleeves</a></li>
+                    <li><a class="nav__item" href="#">Business &amp; Security</a></li>
+                    <li><a class="nav__item" href="#">Cables &amp; Docks</a></li>
+                  </ul>
+                </div>
+                <div class="nav__mega-menu--column">
+                  <p class="heading--three"></p>
+                  <ul class="nav__mega-menu--list">
+                    <li><a class="nav__item" href="#">Cameras &amp; Video</a></li>
+                    <li><a class="nav__item" href="#">Car &amp; Travel</a></li>
+                    <li><a class="nav__item" href="#">Cases &amp; Films</a></li>
+                  </ul>
+                </div>
+                <div class="nav__mega-menu--column">
+                  <p class="heading--three">Category</p>
+                  <ul class="nav__mega-menu--list">
+                    <li><a class="nav__item" href="#">Charging Devices</a></li>
+                    <li><a class="nav__item" href="#">Connected Home</a></li>
+                    <li><a class="nav__item" href="#">Device Care</a></li>
+                    <li><a class="nav__item" href="#">Display &amp; Graphic</a></li>
+                    <li><a class="nav__item" href="#">Fitness &amp; Sport</a></li>
+                  </ul>
+                </div>
+                <div class="nav__mega-menu--column">
+                  <p class="heading--three"></p>
+                  <ul class="nav__mega-menu--list">
+                    <li><a class="nav__item" href="#">Headphones</a></li>
+                    <li><a class="nav__item" href="#">HealhKit</a></li>
+                  </ul>
+                </div>
+                <div class="nav__mega-menu--column">
+                  <p class="heading--three">Category</p>
+                  <ul class="nav__mega-menu--list">
+                    <li><a class="nav__item" href="#">Mice &amp; Keyboards</a></li>
+                    <li><a class="nav__item" href="#">Music Creation</a></li>
+                    <li><a class="nav__item" href="#">Networking &amp; Server</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav__li"><a class="nav__item" href="#Store">Store</a>
+          </li>
+          <li class="nav__li"><a class="nav__item" href="#Iphone">Iphone</a>
+          </li>
+          <li class="nav__li"><a class="nav__item" href="#Ipad">Ipad</a>
+          </li>
+          <li class="nav__li"><a class="nav__item" href="#Macbook">Macbook</a>
+          </li>
+          <li class="nav__li"><a class="nav__item products-link" href="#">Accessories</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <main>    
+      <div class="breadcrumbs">
+        <p class="breadcrumbs__Text-1">
+           Home <span class="breadcrumbs__slash">/ </span>Accesories </p>
+        <p class="breadcrumbs__Text-2"> <span class="breadcrumbs__slash">/</span>Beat Solo2 on Ear Headphones - Black</p>
+      </div>
+      <div class="product-grid"> 
+                <div class="section-banner-accesories">
+                  <div class="section-banner__text">
+                    <h3 class="section-banner-accesories--heading">iPhone 8 </h3>
+                    <p class="section-banner-accesories--paragraph">Performance and design. Taken right to the edge.</p><a class="section-banner__link" href="#">shop now</a>
+                  </div>
+                  <div class="section-banner__img"> <img class="section-banner__img--photo" src="../../../dist/imgs/iphone6s_d.svg"/></div>
+                </div>
+        <div class="bar"> 
+          <p class="bar__item-num">13 item </p>
+          <p class="bar__sort-text">Sort by </p>
+                    <div class="bar__dropdown" id="dropdown1">
+                      <button class="bar__dropdown--btn"><span class="bar__dropdown--btn-text">Choose</span>
+                        <svg>
+                          <use xlink:href="../../../dist/sprite.svg#icon-triangle-down"></use>
+                        </svg>
+                      </button>
+                      <div class="bar__dropdown--content"><a href="#" data-value="name">name</a><a href="#" data-value="modified">modified</a><a href="#" data-value="price">price</a><a href="#" data-value="newest">newest</a></div>
+                    </div>
+          <p class="bar__sort-text">Show </p>
+                    <div class="bar__dropdown" id="dropdown2">
+                      <button class="bar__dropdown--btn"><span class="bar__dropdown--btn-text">Choose</span>
+                        <svg>
+                          <use xlink:href="../../../dist/sprite.svg#icon-triangle-down"></use>
+                        </svg>
+                      </button>
+                      <div class="bar__dropdown--content"><a href="#" data-value="6">6</a><a href="#" data-value="9">9</a><a href="#" data-value="12">12</a><a href="#" data-value="15">15</a></div>
+                    </div>
+          <div class="bar__icons">
+            <button id="grid">
+              <svg class="bar__icons--icon " id="icon-grid">
+                <use xlink:href="../../../dist/sprite3.svg#icon-grid"></use>
+              </svg>
+            </button>
+            <button id="list">
+              <svg class="bar__icons--icon" id="icon-list">
+                <use xlink:href="../../../dist/sprite3.svg#icon-lines"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="product-grid__card">
+          <div class="card  ">
+            <div class="card__img-container"><img class="card__img" src="../../../dist/imgs/card-img.svg"/></div>
+            <div class="card__hover"><a id="">        <img class="card__hover--heart" src="../../../dist/imgs/hearts.svg"/></a><a class="product-link-i" href="#">   <img class="card__hover--cart" src="../../../dist/imgs/cart_2.svg"/></a></div>
+            <div class=" card__info"> <span class="card__title">Apple Macbook Pro</span>
+              <div class="card__rate ssmb"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+              <div class="card__price--container"><span class="card__price">$499 </span>
+                <del class="card__price--del">$599</del>
+              </div>
+            </div>
+          </div>
+          <div class="card  ">
+            <div class="card__img-container"><img class="card__img" src="../../../dist/imgs/card-img.svg"/></div>
+            <div class="card__hover"><a id="">        <img class="card__hover--heart" src="../../../dist/imgs/hearts.svg"/></a><a class="product-link-i" href="#">   <img class="card__hover--cart" src="../../../dist/imgs/cart_2.svg"/></a></div>
+            <div class=" card__info"> <span class="card__title">Apple Macbook Pro</span>
+              <div class="card__rate ssmb"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+              <div class="card__price--container"><span class="card__price">$499 </span>
+                <del class="card__price--del">$599</del>
+              </div>
+            </div>
+          </div>
+          <div class="card  ">
+            <div class="card__img-container"><img class="card__img" src="../../../dist/imgs/card-img.svg"/></div>
+            <div class="card__hover"><a id="">        <img class="card__hover--heart" src="../../../dist/imgs/hearts.svg"/></a><a class="product-link-i" href="#">   <img class="card__hover--cart" src="../../../dist/imgs/cart_2.svg"/></a></div>
+            <div class=" card__info"> <span class="card__title">Apple Macbook Pro</span>
+              <div class="card__rate ssmb"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+              <div class="card__price--container"><span class="card__price">$499 </span>
+                <del class="card__price--del">$599</del>
+              </div>
+            </div>
+          </div>
+          <div class="card  ">
+            <div class="card__img-container"><img class="card__img" src="../../../dist/imgs/card-img.svg"/></div>
+            <div class="card__hover"><a id="">        <img class="card__hover--heart" src="../../../dist/imgs/hearts.svg"/></a><a class="product-link-i" href="#">   <img class="card__hover--cart" src="../../../dist/imgs/cart_2.svg"/></a></div>
+            <div class=" card__info"> <span class="card__title">Apple Macbook Pro</span>
+              <div class="card__rate ssmb"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+              <div class="card__price--container"><span class="card__price">$499 </span>
+                <del class="card__price--del">$599</del>
+              </div>
+            </div>
+          </div>
+          <div class="card  ">
+            <div class="card__img-container"><img class="card__img" src="../../../dist/imgs/card-img.svg"/></div>
+            <div class="card__hover"><a id="">        <img class="card__hover--heart" src="../../../dist/imgs/hearts.svg"/></a><a class="product-link-i" href="#">   <img class="card__hover--cart" src="../../../dist/imgs/cart_2.svg"/></a></div>
+            <div class=" card__info"> <span class="card__title">Apple Macbook Pro</span>
+              <div class="card__rate ssmb"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+              <div class="card__price--container"><span class="card__price">$499 </span>
+                <del class="card__price--del">$599</del>
+              </div>
+            </div>
+          </div>
+          <div class="card  ">
+            <div class="card__img-container"><img class="card__img" src="../../../dist/imgs/card-img.svg"/></div>
+            <div class="card__hover"><a id="">        <img class="card__hover--heart" src="../../../dist/imgs/hearts.svg"/></a><a class="product-link-i" href="#">   <img class="card__hover--cart" src="../../../dist/imgs/cart_2.svg"/></a></div>
+            <div class=" card__info"> <span class="card__title">Apple Macbook Pro</span>
+              <div class="card__rate ssmb"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+              <div class="card__price--container"><span class="card__price">$499 </span>
+                <del class="card__price--del">$599</del>
+              </div>
+            </div>
+          </div>
+          <div class="card  ">
+            <div class="card__img-container"><img class="card__img" src="../../../dist/imgs/card-img.svg"/></div>
+            <div class="card__hover"><a id="">        <img class="card__hover--heart" src="../../../dist/imgs/hearts.svg"/></a><a class="product-link-i" href="#">   <img class="card__hover--cart" src="../../../dist/imgs/cart_2.svg"/></a></div>
+            <div class=" card__info"> <span class="card__title">Apple Macbook Pro</span>
+              <div class="card__rate ssmb"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+              <div class="card__price--container"><span class="card__price">$499 </span>
+                <del class="card__price--del">$599</del>
+              </div>
+            </div>
+          </div>
+          <div class="card  ">
+            <div class="card__img-container"><img class="card__img" src="../../../dist/imgs/card-img.svg"/></div>
+            <div class="card__hover"><a id="">        <img class="card__hover--heart" src="../../../dist/imgs/hearts.svg"/></a><a class="product-link-i" href="#">   <img class="card__hover--cart" src="../../../dist/imgs/cart_2.svg"/></a></div>
+            <div class=" card__info"> <span class="card__title">Apple Macbook Pro</span>
+              <div class="card__rate ssmb"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+              <div class="card__price--container"><span class="card__price">$499 </span>
+                <del class="card__price--del">$599</del>
+              </div>
+            </div>
+          </div>
+          <div class="card  ">
+            <div class="card__img-container"><img class="card__img" src="../../../dist/imgs/card-img.svg"/></div>
+            <div class="card__hover"><a id="">        <img class="card__hover--heart" src="../../../dist/imgs/hearts.svg"/></a><a class="product-link-i" href="#">   <img class="card__hover--cart" src="../../../dist/imgs/cart_2.svg"/></a></div>
+            <div class=" card__info"> <span class="card__title">Apple Macbook Pro</span>
+              <div class="card__rate ssmb"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+              <div class="card__price--container"><span class="card__price">$499 </span>
+                <del class="card__price--del">$599</del>
+              </div>
+            </div>
+          </div>
+          <div class="card  ">
+            <div class="card__img-container"><img class="card__img" src="../../../dist/imgs/card-img.svg"/></div>
+            <div class="card__hover"><a id="">        <img class="card__hover--heart" src="../../../dist/imgs/hearts.svg"/></a><a class="product-link-i" href="#">   <img class="card__hover--cart" src="../../../dist/imgs/cart_2.svg"/></a></div>
+            <div class=" card__info"> <span class="card__title">Apple Macbook Pro</span>
+              <div class="card__rate ssmb"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+              <div class="card__price--container"><span class="card__price">$499 </span>
+                <del class="card__price--del">$599</del>
+              </div>
+            </div>
+          </div>
+          <div class="card  ">
+            <div class="card__img-container"><img class="card__img" src="../../../dist/imgs/card-img.svg"/></div>
+            <div class="card__hover"><a id="">        <img class="card__hover--heart" src="../../../dist/imgs/hearts.svg"/></a><a class="product-link-i" href="#">   <img class="card__hover--cart" src="../../../dist/imgs/cart_2.svg"/></a></div>
+            <div class=" card__info"> <span class="card__title">Apple Macbook Pro</span>
+              <div class="card__rate ssmb"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+              <div class="card__price--container"><span class="card__price">$499 </span>
+                <del class="card__price--del">$599</del>
+              </div>
+            </div>
+          </div>
+          <div class="card  ">
+            <div class="card__img-container"><img class="card__img" src="../../../dist/imgs/card-img.svg"/></div>
+            <div class="card__hover"><a id="">        <img class="card__hover--heart" src="../../../dist/imgs/hearts.svg"/></a><a class="product-link-i" href="#">   <img class="card__hover--cart" src="../../../dist/imgs/cart_2.svg"/></a></div>
+            <div class=" card__info"> <span class="card__title">Apple Macbook Pro</span>
+              <div class="card__rate ssmb"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+              <div class="card__price--container"><span class="card__price">$499 </span>
+                <del class="card__price--del">$599</del>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-list__card">   
+          <div class="card-list">   
+            <div class="card-list__img"><img src="../../../dist/imgs/card-img.svg"/></div>
+            <div class="card-list__content">
+              <h3 class="card-list__content--title">Beats Solo2 On Ear Headphones - Black</h3>
+              <div class="card-list__content--review"> 
+                <div class="card__rate "><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+                <div class="card-list__content--review-reviews"><span>0</span><span>Reviews</span>
+                  <button>Submit a review    </button>
+                </div>
+              </div>
+              <div class="card__price--container">
+                <div class="card__price--container"><span class="card__price">$499</span>
+                  <del class="card__price--del">$599</del>
+                </div>
+              </div>
+              <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ...</p>
+              <div class="card-list__content--icons"> 
+                <div class="card-list__content--icons-shoping"><img src="../../../dist/imgs/cart_2.svg"/><a class="product-link" href="#">Add to cart</a></div>
+                <div class="card-list__content--icons-heart"><img src="../../../dist/imgs/hearts.svg"/></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-list">   
+            <div class="card-list__img"><img src="../../../dist/imgs/card-img.svg"/></div>
+            <div class="card-list__content">
+              <h3 class="card-list__content--title">Beats Solo2 On Ear Headphones - Black</h3>
+              <div class="card-list__content--review"> 
+                <div class="card__rate "><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+                <div class="card-list__content--review-reviews"><span>0</span><span>Reviews</span>
+                  <button>Submit a review    </button>
+                </div>
+              </div>
+              <div class="card__price--container">
+                <div class="card__price--container"><span class="card__price">$499</span>
+                  <del class="card__price--del">$599</del>
+                </div>
+              </div>
+              <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ...</p>
+              <div class="card-list__content--icons"> 
+                <div class="card-list__content--icons-shoping"><img src="../../../dist/imgs/cart_2.svg"/><a class="product-link" href="#">Add to cart</a></div>
+                <div class="card-list__content--icons-heart"><img src="../../../dist/imgs/hearts.svg"/></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-list">   
+            <div class="card-list__img"><img src="../../../dist/imgs/card-img.svg"/></div>
+            <div class="card-list__content">
+              <h3 class="card-list__content--title">Beats Solo2 On Ear Headphones - Black</h3>
+              <div class="card-list__content--review"> 
+                <div class="card__rate "><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+                <div class="card-list__content--review-reviews"><span>0</span><span>Reviews</span>
+                  <button>Submit a review    </button>
+                </div>
+              </div>
+              <div class="card__price--container">
+                <div class="card__price--container"><span class="card__price">$499</span>
+                  <del class="card__price--del">$599</del>
+                </div>
+              </div>
+              <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ...</p>
+              <div class="card-list__content--icons"> 
+                <div class="card-list__content--icons-shoping"><img src="../../../dist/imgs/cart_2.svg"/><a class="product-link" href="#">Add to cart</a></div>
+                <div class="card-list__content--icons-heart"><img src="../../../dist/imgs/hearts.svg"/></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-list">   
+            <div class="card-list__img"><img src="../../../dist/imgs/card-img.svg"/></div>
+            <div class="card-list__content">
+              <h3 class="card-list__content--title">Beats Solo2 On Ear Headphones - Black</h3>
+              <div class="card-list__content--review"> 
+                <div class="card__rate "><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+                <div class="card-list__content--review-reviews"><span>0</span><span>Reviews</span>
+                  <button>Submit a review    </button>
+                </div>
+              </div>
+              <div class="card__price--container">
+                <div class="card__price--container"><span class="card__price">$499</span>
+                  <del class="card__price--del">$599</del>
+                </div>
+              </div>
+              <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ...</p>
+              <div class="card-list__content--icons"> 
+                <div class="card-list__content--icons-shoping"><img src="../../../dist/imgs/cart_2.svg"/><a class="product-link" href="#">Add to cart</a></div>
+                <div class="card-list__content--icons-heart"><img src="../../../dist/imgs/hearts.svg"/></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-list">   
+            <div class="card-list__img"><img src="../../../dist/imgs/card-img.svg"/></div>
+            <div class="card-list__content">
+              <h3 class="card-list__content--title">Beats Solo2 On Ear Headphones - Black</h3>
+              <div class="card-list__content--review"> 
+                <div class="card__rate "><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+                <div class="card-list__content--review-reviews"><span>0</span><span>Reviews</span>
+                  <button>Submit a review    </button>
+                </div>
+              </div>
+              <div class="card__price--container">
+                <div class="card__price--container"><span class="card__price">$499</span>
+                  <del class="card__price--del">$599</del>
+                </div>
+              </div>
+              <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ...</p>
+              <div class="card-list__content--icons"> 
+                <div class="card-list__content--icons-shoping"><img src="../../../dist/imgs/cart_2.svg"/><a class="product-link" href="#">Add to cart</a></div>
+                <div class="card-list__content--icons-heart"><img src="../../../dist/imgs/hearts.svg"/></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-list">   
+            <div class="card-list__img"><img src="../../../dist/imgs/card-img.svg"/></div>
+            <div class="card-list__content">
+              <h3 class="card-list__content--title">Beats Solo2 On Ear Headphones - Black</h3>
+              <div class="card-list__content--review"> 
+                <div class="card__rate "><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+                <div class="card-list__content--review-reviews"><span>0</span><span>Reviews</span>
+                  <button>Submit a review    </button>
+                </div>
+              </div>
+              <div class="card__price--container">
+                <div class="card__price--container"><span class="card__price">$499</span>
+                  <del class="card__price--del">$599</del>
+                </div>
+              </div>
+              <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ...</p>
+              <div class="card-list__content--icons"> 
+                <div class="card-list__content--icons-shoping"><img src="../../../dist/imgs/cart_2.svg"/><a class="product-link" href="#">Add to cart</a></div>
+                <div class="card-list__content--icons-heart"><img src="../../../dist/imgs/hearts.svg"/></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-list">   
+            <div class="card-list__img"><img src="../../../dist/imgs/card-img.svg"/></div>
+            <div class="card-list__content">
+              <h3 class="card-list__content--title">Beats Solo2 On Ear Headphones - Black</h3>
+              <div class="card-list__content--review"> 
+                <div class="card__rate "><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+                <div class="card-list__content--review-reviews"><span>0</span><span>Reviews</span>
+                  <button>Submit a review    </button>
+                </div>
+              </div>
+              <div class="card__price--container">
+                <div class="card__price--container"><span class="card__price">$499</span>
+                  <del class="card__price--del">$599</del>
+                </div>
+              </div>
+              <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ...</p>
+              <div class="card-list__content--icons"> 
+                <div class="card-list__content--icons-shoping"><img src="../../../dist/imgs/cart_2.svg"/><a class="product-link" href="#">Add to cart</a></div>
+                <div class="card-list__content--icons-heart"><img src="../../../dist/imgs/hearts.svg"/></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-list">   
+            <div class="card-list__img"><img src="../../../dist/imgs/card-img.svg"/></div>
+            <div class="card-list__content">
+              <h3 class="card-list__content--title">Beats Solo2 On Ear Headphones - Black</h3>
+              <div class="card-list__content--review"> 
+                <div class="card__rate "><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+                <div class="card-list__content--review-reviews"><span>0</span><span>Reviews</span>
+                  <button>Submit a review    </button>
+                </div>
+              </div>
+              <div class="card__price--container">
+                <div class="card__price--container"><span class="card__price">$499</span>
+                  <del class="card__price--del">$599</del>
+                </div>
+              </div>
+              <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ...</p>
+              <div class="card-list__content--icons"> 
+                <div class="card-list__content--icons-shoping"><img src="../../../dist/imgs/cart_2.svg"/><a class="product-link" href="#">Add to cart</a></div>
+                <div class="card-list__content--icons-heart"><img src="../../../dist/imgs/hearts.svg"/></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-list">   
+            <div class="card-list__img"><img src="../../../dist/imgs/card-img.svg"/></div>
+            <div class="card-list__content">
+              <h3 class="card-list__content--title">Beats Solo2 On Ear Headphones - Black</h3>
+              <div class="card-list__content--review"> 
+                <div class="card__rate "><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+                <div class="card-list__content--review-reviews"><span>0</span><span>Reviews</span>
+                  <button>Submit a review    </button>
+                </div>
+              </div>
+              <div class="card__price--container">
+                <div class="card__price--container"><span class="card__price">$499</span>
+                  <del class="card__price--del">$599</del>
+                </div>
+              </div>
+              <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ...</p>
+              <div class="card-list__content--icons"> 
+                <div class="card-list__content--icons-shoping"><img src="../../../dist/imgs/cart_2.svg"/><a class="product-link" href="#">Add to cart</a></div>
+                <div class="card-list__content--icons-heart"><img src="../../../dist/imgs/hearts.svg"/></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-list">   
+            <div class="card-list__img"><img src="../../../dist/imgs/card-img.svg"/></div>
+            <div class="card-list__content">
+              <h3 class="card-list__content--title">Beats Solo2 On Ear Headphones - Black</h3>
+              <div class="card-list__content--review"> 
+                <div class="card__rate "><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+                <div class="card-list__content--review-reviews"><span>0</span><span>Reviews</span>
+                  <button>Submit a review    </button>
+                </div>
+              </div>
+              <div class="card__price--container">
+                <div class="card__price--container"><span class="card__price">$499</span>
+                  <del class="card__price--del">$599</del>
+                </div>
+              </div>
+              <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ...</p>
+              <div class="card-list__content--icons"> 
+                <div class="card-list__content--icons-shoping"><img src="../../../dist/imgs/cart_2.svg"/><a class="product-link" href="#">Add to cart</a></div>
+                <div class="card-list__content--icons-heart"><img src="../../../dist/imgs/hearts.svg"/></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-list">   
+            <div class="card-list__img"><img src="../../../dist/imgs/card-img.svg"/></div>
+            <div class="card-list__content">
+              <h3 class="card-list__content--title">Beats Solo2 On Ear Headphones - Black</h3>
+              <div class="card-list__content--review"> 
+                <div class="card__rate "><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+                <div class="card-list__content--review-reviews"><span>0</span><span>Reviews</span>
+                  <button>Submit a review    </button>
+                </div>
+              </div>
+              <div class="card__price--container">
+                <div class="card__price--container"><span class="card__price">$499</span>
+                  <del class="card__price--del">$599</del>
+                </div>
+              </div>
+              <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ...</p>
+              <div class="card-list__content--icons"> 
+                <div class="card-list__content--icons-shoping"><img src="../../../dist/imgs/cart_2.svg"/><a class="product-link" href="#">Add to cart</a></div>
+                <div class="card-list__content--icons-heart"><img src="../../../dist/imgs/hearts.svg"/></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-list">   
+            <div class="card-list__img"><img src="../../../dist/imgs/card-img.svg"/></div>
+            <div class="card-list__content">
+              <h3 class="card-list__content--title">Beats Solo2 On Ear Headphones - Black</h3>
+              <div class="card-list__content--review"> 
+                <div class="card__rate "><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+                <div class="card-list__content--review-reviews"><span>0</span><span>Reviews</span>
+                  <button>Submit a review    </button>
+                </div>
+              </div>
+              <div class="card__price--container">
+                <div class="card__price--container"><span class="card__price">$499</span>
+                  <del class="card__price--del">$599</del>
+                </div>
+              </div>
+              <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lectus lorem nunc leifend laorevtr istique et congue. Vivamus adipiscin vulputate g nisl ut dolor ...</p>
+              <div class="card-list__content--icons"> 
+                <div class="card-list__content--icons-shoping"><img src="../../../dist/imgs/cart_2.svg"/><a class="product-link" href="#">Add to cart</a></div>
+                <div class="card-list__content--icons-heart"><img src="../../../dist/imgs/hearts.svg"/></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pagination"> 
+          <ul class="pagination__list"> 
+            <li><a class="pagination__list--item" href="#">1</a></li>
+            <li><a class="pagination__list--item" href="#">2</a></li>
+            <li><a class="pagination__list--item" href="#">3</a></li>
+            <li><a class="pagination__list--item" href="#">4</a></li>
+            <li><a class="pagination__list--item" href="#">5</a></li>
+          </ul>
+        </div>
+        <div class="side-bar">
+          <div class="side-bar__box">
+                        <p class="side-bar__heading">Accesories</p>
+                        <ul class="side-bar__list">
+                          <li class="side-bar__flex"><a class="side-bar__link" href="#">Apple Car</a><span class="side-bar__num">2</span></li>
+                          <li class="side-bar__flex"><a class="side-bar__link" href="#">Air port &amp; wireless</a><span class="side-bar__num">48</span></li>
+                          <li class="side-bar__flex"><a class="side-bar__link" href="#">Cables &amp; Docks</a><span class="side-bar__num">14</span></li>
+                          <li class="side-bar__flex"><a class="side-bar__link" href="#">Cases &amp; Films</a><span class="side-bar__num">15</span></li>
+                          <li class="side-bar__flex"><a class="side-bar__link" href="#">Charging Devices</a><span class="side-bar__num">23</span></li>
+                          <li class="side-bar__flex"><a class="side-bar__link" href="#">Connected home</a><span class="side-bar__num">1</span></li>
+                          <li class="side-bar__flex"><a class="side-bar__link" href="#">Headphones</a><span class="side-bar__num">95</span></li>
+                        </ul>
+          </div>
+          <div class="side-bar__box">
+            <div class="price-range">
+              <h3 class="price-range__title">PRICES</h3>
+              <div class="range-output"><span class="range-output__text">Ranger: </span><span>$ </span><span id="output-left">20.00</span><span> - $</span><span id="output-right">80.00</span></div>
+              <div class="range-container">
+                <div class="range-track"></div>
+                <div class="range-track-active"></div>
+                <input type="range" id="range-left" min="0" max="500" value="20.99" step="0.01"/>
+                <input type="range" id="range-right" min="0" max="500" value="300.99" step="0.01"/>
+              </div>
+            </div>
+          </div>
+          <div class="side-bar__box"><span class="side-bar__box--color-title">COLOR</span>
+            <div class="colors-container">
+                          <div class="border-blue">
+                            <div class="blue"></div>
+                          </div>
+                          <div class="border-red">
+                            <div class="red"></div>
+                          </div>
+                          <div class="border-black">
+                            <div class="black"></div>
+                          </div>
+                          <div class="border-yellow">
+                            <div class="yellow"></div>
+                          </div>
+                          <div class="border-pink">
+                            <div class="pink"></div>
+                          </div>
+                          <div class="border-bage">
+                            <div class="bage"></div>
+                          </div>
+            </div>
+          </div>
+          <div class="side-bar__box">
+                        <p class="side-bar__heading">BRANDS</p>
+                        <ul class="side-bar__list">
+                          <li class="side-bar__flex"><a class="side-bar__link" href="#">Apple</a><span class="side-bar__num">99</span></li>
+                          <li class="side-bar__flex"><a class="side-bar__link" href="#">LG</a><span class="side-bar__num">99</span></li>
+                          <li class="side-bar__flex"><a class="side-bar__link" href="#">Samsung</a><span class="side-bar__num">99</span></li>
+                          <li class="side-bar__flex"><a class="side-bar__link" href="#">Siemens</a><span class="side-bar__num">99</span></li>
+                        </ul>
+          </div>
+          <div class="side-bar__box">   
+            <div class="side-bar__btn-container">
+              <button class="side-bar__box--btn"><span class="side-bar__box--btn-text">MORE                       </span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer__horizontal-1"></div>
+      <div class="footer"> 
+        <div class="footer__item-1"><img class="footer__item-1--logo" src="../../../dist/imgs/logo.svg"/>
+          <p class="footer__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever.Since the 1500s, when an unknown printer.</p>
+        </div>
+        <div class="footer__item-2">
+          <h5 class="fifth--heading">Follow us</h5>
+          <p class="footer__text"> Since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+          <ul class="follow--list">
+            <li class="follow--list--icon"> <a href="https://www.facebook.com/" target="_blank"><img src="../../../dist/imgs/fb.svg"/></a></li>
+            <li> <a href="https://www.twitter.com/" target="_blank"><img src="../../../dist/imgs/tw.svg"/></a></li>
+          </ul>
+        </div>
+        <div class="footer__item-3">
+          <h5 class="fifth--heading">Contact Us</h5>
+          <ul class="lists">
+            <li> 
+              <p class="footer__text"> My Company , 4578 Marmora Road, Glasgow D04 89GR </p>
+            </li>
+            <li> 
+              <p class="footer__text"> Call us now: 0123-456-789</p>
+            </li>
+            <li> <a class="email" href="mailto:support@whatever.com">Email:support@whatever.com</a></li>
+          </ul>
+        </div>
+        <div class="footer__horizontal-2"></div>
+            <div class="footer__item-4">
+              <h5 class="fifth--heading">Information</h5>
+              <ul class="lists"> 
+                <li></li><a class="list-item" href="#">About us</a>
+                <li></li><a class="list-item" href="#">Information</a>
+                <li></li><a class="list-item" href="#">Privacy Policy</a>
+                <li></li><a class="list-item" href="#">Terms and Conditions</a>
+              </ul>
+            </div>
+            <div class="footer__item-5">
+              <h5 class="fifth--heading">Service</h5>
+              <ul class="lists"> 
+                <li></li><a class="list-item" href="#">About us</a>
+                <li></li><a class="list-item" href="#">Information</a>
+                <li></li><a class="list-item" href="#">Privacy Policy</a>
+                <li></li><a class="list-item" href="#">Terms and Conditions</a>
+              </ul>
+            </div>
+            <div class="footer__item-6">
+              <h5 class="fifth--heading">Extras</h5>
+              <ul class="lists"> 
+                <li></li><a class="list-item" href="#">About us</a>
+                <li></li><a class="list-item" href="#">Information</a>
+                <li></li><a class="list-item" href="#">Privacy Policy</a>
+                <li></li><a class="list-item" href="#">Terms and Conditions</a>
+              </ul>
+            </div>
+            <div class="footer__item-7">
+              <h5 class="fifth--heading">My Account</h5>
+              <ul class="lists"> 
+                <li></li><a class="list-item" href="#">About us</a>
+                <li></li><a class="list-item" href="#">Information</a>
+                <li></li><a class="list-item" href="#">Privacy Policy</a>
+                <li></li><a class="list-item" href="#">Terms and Conditions</a>
+              </ul>
+            </div>
+            <div class="footer__item-8">
+              <h5 class="fifth--heading">Userful Links</h5>
+              <ul class="lists"> 
+                <li></li><a class="list-item" href="#">About us</a>
+                <li></li><a class="list-item" href="#">Information</a>
+                <li></li><a class="list-item" href="#">Privacy Policy</a>
+                <li></li><a class="list-item" href="#">Terms and Conditions</a>
+              </ul>
+            </div>
+            <div class="footer__item-9">
+              <h5 class="fifth--heading">Our Offers</h5>
+              <ul class="lists"> 
+                <li></li><a class="list-item" href="#">About us</a>
+                <li></li><a class="list-item" href="#">Information</a>
+                <li></li><a class="list-item" href="#">Privacy Policy</a>
+                <li></li><a class="list-item" href="#">Terms and Conditions</a>
+              </ul>
+            </div>
+      </div>
+      <div class="footer__horizontal-3"></div>
+      <div class="footer__copyright"> 
+        <p class="footer__copyright--text">&copy; 2018 Ecommerce theme by www.bisenbaev.com</p>
+        <div class="footer__copyright--payments">        <img class="footer__copyright--photo" src="../../../dist/imgs/Western-union.jpg"/><img class="footer__copyright--photo" src="../../../dist/imgs/Group-19.jpg"/><img class="footer__copyright--photo" src="../../../dist/imgs/Paypal.jpg"/><img class="footer__copyright--photo" src="../../../dist/imgs/visa.jpg"/></div>
+      </div>
+    </footer>
+  </body>
+</html>

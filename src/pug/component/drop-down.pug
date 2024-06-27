@@ -1,0 +1,12 @@
+mixin dropDown(i1,i2,i3,i4,id)
+    div(class="bar__dropdown" id=`${id}`)
+        button.bar__dropdown--btn
+            span.bar__dropdown--btn-text Choose
+            svg
+                use(xlink:href="../../../dist/sprite.svg#icon-triangle-down")
+        .bar__dropdown--content
+            a(href="#" data-value=`${i1}`) #{i1}
+            a(href="#" data-value=`${i2}`) #{i2}
+            a(href="#" data-value=`${i3}`) #{i3}
+            a(href="#" data-value=`${i4}`) #{i4}
+            

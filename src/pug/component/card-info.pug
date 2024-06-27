@@ -1,0 +1,19 @@
+mixin cardinfo(title,price,dis,card__info,mb)
+    div(class=` ${card__info}`) 
+        span.card__title #{title}
+        +cardRate(mb)
+        +cardPrice(price,dis)
+
+
+mixin cardRate(mb)
+        div(class=`card__rate ${mb}`)
+            img(src="../../../dist/imgs/star-yellow.svg" class="card__rate--star")              
+            img(src="../../../dist/imgs/star-yellow.svg" class="card__rate--star")              
+            img(src="../../../dist/imgs/star-yellow.svg" class="card__rate--star")              
+            img(src="../../../dist/imgs/star-yellow.svg" class="card__rate--star")              
+            img(src="../../../dist/imgs/star-grey.svg" class="card__rate--star") 
+
+mixin cardPrice(price,dis)
+        .card__price--container
+            span.card__price #{price}
+            del.card__price--del #{dis}

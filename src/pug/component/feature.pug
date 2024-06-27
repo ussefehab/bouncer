@@ -1,0 +1,6 @@
+include ../component/card-info.pug
+mixin feature(title,price,dis,img,card__start,feature__img_up)
+    .feature  
+        .feature__img--box     
+            img(src=`${img}` class=`feature__img ${feature__img_up}`)
+        +cardinfo(title,price,dis,card__start)

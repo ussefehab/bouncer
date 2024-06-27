@@ -1,0 +1,207 @@
+.side-bar{
+    grid-column: 1/ 2;
+    width: 100%;
+    grid-row: 1/ -1;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    @include respond (tab-port){
+      display: none;
+   } 
+    &__btn-container{
+      display: flex;
+      justify-content: center;
+    }
+    &__box{
+        background-color: $color-gray--light;
+        padding: 2rem;
+        border-radius: 5px ;
+    }
+    &__list{
+        list-style: none;
+    }
+    &__flex{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+/////////////////
+// range price //
+/////////////////
+.price-range{
+  position: relative;
+  height: 14rem;
+}
+.range-output {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  top: 40%;
+}
+.range-container {
+    width: 100%;
+  }
+  
+  .range-track {
+    width: 100%;
+    height: 6px;
+    background: #ddd;
+    position: absolute;
+    top: 80%;
+    transform: translateY(-50%);
+    z-index: 0;
+    border-radius: 4px;
+  }
+  
+  .range-track-active {
+    height: 6px;
+    background: $color-primary;
+    position: absolute;
+    top: 80%;
+    transform: translateY(-50%);
+    z-index: 1;
+    border-radius: 4px;
+  }
+  
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    background: transparent;
+    position: absolute;
+    top: 80%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    &:focus{
+      outline: none;
+    }
+  
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 1.4rem;
+      height: 1.4rem;
+      background: $color-primary;
+      border: 2px solid $color-white;
+      cursor: pointer;
+      border-radius: 50%;
+      pointer-events: all;
+      position: relative;
+      z-index: 2;
+    }
+  
+    &::-moz-range-thumb {
+      width: 1.4rem;
+      height: 1.4rem;
+      background: $color-primary;
+      border: 2px solid $color-white;
+      cursor: pointer;
+      border-radius: 50%;
+      pointer-events: all;
+      position: relative;
+      z-index: 2;
+    }
+  }
+  
+  input[type="range"]#range-left {
+    z-index: 3;
+  }
+  input[type="range"]#range-right {
+    z-index: 3;
+  }
+  ///////////
+  /// color//
+  /// ///////
+  %color{
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+  }
+  %border{
+    border-radius: 50%;
+    height: 2.6rem;
+    width: 2.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  @mixin border-w($color){
+    border: 2px solid rgba($color, .7);
+  }
+  .colors-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  ///////////////////
+  .border-blue{
+    @extend %border;
+    &:hover {
+      @include border-w($color-primary--light);
+  }
+  }
+  .blue{
+    background-color: $color-primary;
+    @extend %color;
+  }
+  //////////////////////
+  .border-red{
+    @extend %border;
+    &:hover {
+      @include border-w($color-red);
+  }
+  }
+  .red{
+    background-color: $color-red;
+    @extend %color;
+  }
+  /////////////////////
+  .border-black{
+    @extend %border;
+    &:hover {
+      @include border-w($color-black-dark);
+  }
+  }
+
+  .black{
+    background-color: $color-black-dark;
+    @extend %color;
+  }
+///////////////////////////
+  .border-yellow{
+    @extend %border;
+    &:hover {
+      @include border-w($color-yellow);
+  }
+  }
+  .yellow{
+    background-color: $color-yellow;
+    @extend %color;
+  }
+  ////////////////////////
+  .border-pink{
+    @extend %border;
+    &:hover {
+      @include border-w($color-pink);
+  }
+  }
+  .pink{
+    background-color: $color-pink;
+    @extend %color
+  }
+  .border-bage{
+    @extend %border;
+    &:hover {
+      @include border-w($color-bage);
+  }
+  }
+  .bage{
+    background-color: $color-bage;
+    @extend %color
+  }
+
+ 

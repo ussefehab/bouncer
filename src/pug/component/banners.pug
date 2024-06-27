@@ -1,0 +1,17 @@
+section.banners 
+    figure.figure-1 
+        img(src="../../../dist/imgs/iphone6s.svg" class="figure-1__img")
+        figureCaption.figure-1__caption 
+            h2.figure-1__caption--heading iPhone 6
+            p.figure-1__caption--paragraph Lorem Ipsum dolor sit amet, consectetur adipiscing elit, labor
+            span.figure-1__caption--price $399
+    figure.figure-2 
+        img(src="../../../dist/imgs/Oculus.svg" class="figure-2__img")
+        figureCaption.figure-2__caption 
+            h2.figure-2__caption--heading Oculus Rift
+            span.figure-2__caption--price $349
+    include ./gopro.pug
+    +gopro("figure-3","figure-3__caption","figure-3__img","figure-3__caption--paragraph","figure-3__caption--price ")        
+
+
+

@@ -1,0 +1,460 @@
+<!DOCTYPE html >
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>BOUNCER</title>
+    <link href="../../../dist/css/styles.min.css" rel="stylesheet"/>
+    <script src="../../../src/js/logic/scripts.js" defer="defer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+    <script src="../../../src/js/logic/card-slider.js" defer="defer"> </script>
+  </head>
+  <body>
+    <div class="header-container">  
+      <div class="header">
+        <ul class="header__item-1">
+          <li class="menu__open">
+            <button class="menu"> 
+              <svg class="menu__svg">
+                <use xlink:href="../../../dist/sprite3.svg#icon-lines"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="menu__close">
+            <button class="menu"> <span>✖</span></button>
+          </li>
+          <li class="header__item"><a class="header__profile" href="#">EN 
+              <svg class="header__arrow">
+                <use xlink:href="../../../dist/sprite.svg#icon-triangle-down"></use>
+              </svg></a></li>
+          <li class="header__item"><a class="header__profile" href="#">USD 
+              <svg class="header__arrow">
+                <use xlink:href="../../../dist/sprite.svg#icon-triangle-down"></use>
+              </svg></a></li>
+        </ul>
+        <ul class="header__item-2">
+          <li class="mdm"><a class="header__profile alignv" href="#"> 
+              <svg class="header__icon sm">
+                <use xlink:href="../../../dist/sprite.svg#icon-user-o"></use>
+              </svg><span>My profile     </span></a></li>
+          <li class="header__item mdm display"><a class="header__profile alignv" href="#" id="cart-link"> 
+              <svg class="header__icon sm">
+                <use xlink:href="../../../dist/sprite.svg#icon-basket"></use>
+              </svg><span class="sm">0 items</span><span class="smt price">$ 0.00    </span></a></li>
+          <li class="header__item">
+            <button class="search-btn"> 
+              <svg class="header__icon">
+                <use xlink:href="../../../dist/sprite.svg#icon-magnifying-glass"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <ul class="header__mobile">  
+        <li class="smb"><a class="header__profile alignv" href="#"> 
+            <svg class="header__icon sm">
+              <use xlink:href="../../../dist/sprite.svg#icon-user-o"></use>
+            </svg><span>My profile </span></a></li>
+        <li class="nav__li">
+          <div class="mega">   <a class="nav__item Home" href="#Home">Home  
+              <svg class="header__arrow">
+                <use xlink:href="../../../dist/sprite.svg#icon-triangle-down">              </use>
+              </svg></a>
+            <div class="header__mobile-mega hidden">
+              <p class="heading--three header__mobile--category" id="category-1">Category
+                <svg class="header__arrow">
+                  <use xlink:href="../../../dist/sprite.svg#icon-triangle-down"></use>
+                </svg>
+              </p>
+              <ul class="header__mobile--list hidden" id="list-1">
+                <li><a class="header__mobile--link" href="index.html">AirPort &amp; Wireless</a></li>
+                <li><a class="header__mobile--link" href="index.html">AppleCare</a></li>
+                <li><a class="header__mobile--link" href="index.html">Bags, Shells &amp; Sleeves</a></li>
+                <li><a class="header__mobile--link" href="index.html">Business &amp; Security</a></li>
+                <li><a class="header__mobile--link" href="index.html">Cables &amp; Docks</a></li>
+                <li><a class="header__mobile--link" href="index.html">Cameras &amp; Video</a></li>
+                <li><a class="header__mobile--link" href="index.html">Car &amp; Travel</a></li>
+                <li><a class="header__mobile--link" href="index.html">Cases &amp; Films</a></li>
+              </ul>
+            </div>
+            <div class="header__mobile-mega hidden">
+              <p class="heading--three header__mobile--category" id="category-2">Category
+                <svg class="header__arrow">
+                  <use xlink:href="../../../dist/sprite.svg#icon-triangle-down"></use>
+                </svg>
+              </p>
+              <ul class="header__mobile--list hidden" id="list-2">
+                <li><a class="header__mobile--link" href="index.html">Charging Devices</a></li>
+                <li><a class="header__mobile--link" href="index.html">Connected Home</a></li>
+                <li><a class="header__mobile--link" href="index.html">Device Care</a></li>
+                <li><a class="header__mobile--link" href="index.html">Display &amp; Graphic</a></li>
+                <li><a class="header__mobile--link" href="index.html">Fitness &amp; Sport</a></li>
+                <li><a class="header__mobile--link" href="index.html">Headphones</a></li>
+                <li><a class="header__mobile--link" href="index.html">HealhKit</a></li>
+              </ul>
+            </div>
+            <div class="header__mobile-mega hidden">
+              <p class="heading--three header__mobile--category" id="category-3">Category
+                <svg class="header__arrow">
+                  <use xlink:href="../../../dist/sprite.svg#icon-triangle-down"></use>
+                </svg>
+              </p>
+              <ul class="header__mobile--list hidden" id="list-3">
+                <li><a class="header__mobile--link" href="index.html">Mice &amp; Keyboards</a></li>
+                <li><a class="header__mobile--link" href="index.html">Music Creation</a></li>
+                <li><a class="header__mobile--link" href="index.html">Networking &amp; Server</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="nav__li"><a class="nav__item" href="#Store">Store  </a>
+        </li>
+        <li class="nav__li"><a class="nav__item" href="#Iphone">Iphone  </a>
+        </li>
+        <li class="nav__li"><a class="nav__item" href="#Ipad">Ipad  </a>
+        </li>
+        <li class="nav__li"><a class="nav__item" href="#Macbook">Macbook  </a>
+        </li>
+        <li class="nav__li"><a class="nav__item products-link" href="#">Accessories</a>
+        </li>
+      </ul>
+      <nav class="nav"> <img class="nav__logo" src="../../../dist/imgs/logo-main.jpg"/>
+        <ul class="nav__list">
+          <li class="nav__li"><a class="nav__item" href="#Home">Home</a>
+            <div class="nav__mega-menu">
+              <div class="nav__mega-menu-content">
+                <div class="nav__mega-menu--column">
+                  <p class="heading--three">Category</p>
+                  <ul class="nav__mega-menu--list">
+                    <li><a class="nav__item" href="#">AirPort &amp; Wireless</a></li>
+                    <li><a class="nav__item" href="#">AppleCare</a></li>
+                    <li><a class="nav__item" href="#">Bags, Shells &amp; Sleeves</a></li>
+                    <li><a class="nav__item" href="#">Business &amp; Security</a></li>
+                    <li><a class="nav__item" href="#">Cables &amp; Docks</a></li>
+                  </ul>
+                </div>
+                <div class="nav__mega-menu--column">
+                  <p class="heading--three"></p>
+                  <ul class="nav__mega-menu--list">
+                    <li><a class="nav__item" href="#">Cameras &amp; Video</a></li>
+                    <li><a class="nav__item" href="#">Car &amp; Travel</a></li>
+                    <li><a class="nav__item" href="#">Cases &amp; Films</a></li>
+                  </ul>
+                </div>
+                <div class="nav__mega-menu--column">
+                  <p class="heading--three">Category</p>
+                  <ul class="nav__mega-menu--list">
+                    <li><a class="nav__item" href="#">Charging Devices</a></li>
+                    <li><a class="nav__item" href="#">Connected Home</a></li>
+                    <li><a class="nav__item" href="#">Device Care</a></li>
+                    <li><a class="nav__item" href="#">Display &amp; Graphic</a></li>
+                    <li><a class="nav__item" href="#">Fitness &amp; Sport</a></li>
+                  </ul>
+                </div>
+                <div class="nav__mega-menu--column">
+                  <p class="heading--three"></p>
+                  <ul class="nav__mega-menu--list">
+                    <li><a class="nav__item" href="#">Headphones</a></li>
+                    <li><a class="nav__item" href="#">HealhKit</a></li>
+                  </ul>
+                </div>
+                <div class="nav__mega-menu--column">
+                  <p class="heading--three">Category</p>
+                  <ul class="nav__mega-menu--list">
+                    <li><a class="nav__item" href="#">Mice &amp; Keyboards</a></li>
+                    <li><a class="nav__item" href="#">Music Creation</a></li>
+                    <li><a class="nav__item" href="#">Networking &amp; Server</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav__li"><a class="nav__item" href="#Store">Store</a>
+          </li>
+          <li class="nav__li"><a class="nav__item" href="#Iphone">Iphone</a>
+          </li>
+          <li class="nav__li"><a class="nav__item" href="#Ipad">Ipad</a>
+          </li>
+          <li class="nav__li"><a class="nav__item" href="#Macbook">Macbook</a>
+          </li>
+          <li class="nav__li"><a class="nav__item products-link" href="#">Accessories</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <main>    
+      <div class="breadcrumbs">
+        <p class="breadcrumbs__Text-1">
+           Home <span class="breadcrumbs__slash">/ </span>Accesories </p>
+        <p class="breadcrumbs__Text-2"> <span class="breadcrumbs__slash">/</span>Beat Solo2 on Ear Headphones - Black</p>
+      </div>
+      <div class="product">  
+        <div class="product__information">
+          <div class="product__images"><img class="product__images--img" src="../../../dist/imgs/hpbig.jpg"/>
+            <div class="product__images--collection"> 
+              <div class="product__images--box"><img class="product__images--small" src="../../../dist/imgs/hps.jpg"/></div>
+              <div class="product__images--box">   <img class="product__images--small" src="../../../dist/imgs/hp2.jpg"/></div>
+              <div class="product__images--box"><img class="product__images--small" src="../../../dist/imgs/hpss.jpg"/></div>
+              <div class="product__images--box"> <img class="product__images--small mrl" src="../../../dist/imgs/hp3.jpg"/></div>
+            </div>
+          </div>
+          <div class="product__information--description">
+            <h3 class="card-list__content--title">Beats Solo2 On Ear Headphones - Black</h3>
+            <div class="card-list__content--review"> 
+              <div class="card__rate undefined"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+              <div class="card-list__content--review-reviews"><span>0</span><span>Reviews</span>
+                <button>Submit a review    </button>
+              </div>
+            </div>
+            <div class="card__price--container">
+              <div class="card__price--container"><span class="card__price">$499</span>
+                <del class="card__price--del">$599</del>
+              </div>
+            </div>
+            <div class="product__inventory"> <span class="product__inventory--avilability"> Availability:</span><span class="product__inventory--stock"> In Stock</span></div>
+            <div class="product__category"> <span class="product__inventory--avilability">  Category:</span><span class="product__inventory--stock"> Accesories</span></div>
+            <div class="product__shipping"> <span class="product__inventory--avilability">  Free shipping    </span></div>
+            <div class="product__color"> <span>Select Color:</span>
+              <div class="product__color--box">
+                              <div class="border-blue">
+                                <div class="blue"></div>
+                              </div>
+                              <div class="border-red">
+                                <div class="red"></div>
+                              </div>
+                              <div class="border-black">
+                                <div class="black"></div>
+                              </div>
+                              <div class="border-yellow">
+                                <div class="yellow"></div>
+                              </div>
+              </div>
+            </div>
+            <div class="product__size"> <span class="product__size--text">Size </span>
+                            <div class="bar__dropdown" id="dropdown3">
+                              <button class="bar__dropdown--btn"><span class="bar__dropdown--btn-text">Choose</span>
+                                <svg>
+                                  <use xlink:href="../../../dist/sprite.svg#icon-triangle-down"></use>
+                                </svg>
+                              </button>
+                              <div class="bar__dropdown--content"><a href="#" data-value="XS">XS</a><a href="#" data-value="S">S</a><a href="#" data-value="M">M</a><a href="#" data-value="L">L</a></div>
+                            </div>
+            </div>
+            <div class="product__purchese">   
+                            <div class="counter">
+                              <button id="decrement"> 
+                                <svg>
+                                  <use xlink:href="../../../dist/sprite4.svg#icon-minus"></use>
+                                </svg>
+                              </button>
+                              <div class="counter__display" id="counter-value">1</div>
+                              <button id="increment"> 
+                                <svg>
+                                  <use xlink:href="../../../dist/sprite4.svg#icon-plus"></use>
+                                </svg>
+                              </button>
+                            </div>
+              <div class="card-list__content--icons"> 
+                <div class="card-list__content--icons-shoping"><img src="../../../dist/imgs/cart_2.svg"/><a class="product-link" href="#">Add to cart</a></div>
+                <div class="card-list__content--icons-heart"><img src="../../../dist/imgs/hearts.svg"/></div>
+              </div>
+            </div>
+            <div class="product__social">   
+                            <div class="social social__bgColor-fb">
+                              <svg> 
+                                <use xlink:href="../../../dist/sprite5.svg#icon-facebook"></use>
+                              </svg><span>Share on Facebook</span>
+                            </div>
+                            <div class="social social__bgColor-tw">
+                              <svg> 
+                                <use xlink:href="../../../dist/sprite5.svg#icon-twitter"></use>
+                              </svg><span>Share on Twitter</span>
+                            </div>
+            </div>
+          </div>
+        </div>
+        <div class="best-seller-card"> <span class="best-seller-card__title">BEST SELLER</span>
+          <div class="card-slider">
+            <div class="card  card-slider__pos">
+              <div class="card__img-container"><img class="card__img" src="../../../dist/imgs/card-img.svg"/></div>
+              <div class="card__hover"><a id="">        <img class="card__hover--heart" src="../../../dist/imgs/hearts.svg"/></a><a class="product-link-i" href="#">   <img class="card__hover--cart" src="../../../dist/imgs/cart_2.svg"/></a></div>
+              <div class=" card__info"> <span class="card__title">Apple Macbook Pro</span>
+                <div class="card__rate ssmb"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+                <div class="card__price--container"><span class="card__price">$499 </span>
+                  <del class="card__price--del">$599</del>
+                </div>
+              </div>
+            </div>
+            <div class="card  card-slider__pos">
+              <div class="card__img-container"><img class="card__img" src="../../../dist/imgs/gopro.svg"/></div>
+              <div class="card__hover"><a id="">        <img class="card__hover--heart" src="../../../dist/imgs/hearts.svg"/></a><a class="product-link-i" href="#">   <img class="card__hover--cart" src="../../../dist/imgs/cart_2.svg"/></a></div>
+              <div class=" card__info"> <span class="card__title">GoPro</span>
+                <div class="card__rate ssmb"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+                <div class="card__price--container"><span class="card__price">$299 </span>
+                  <del class="card__price--del">$399</del>
+                </div>
+              </div>
+            </div>
+            <div class="card  card-slider__pos">
+              <div class="card__img-container"><img class="card__img" src="../../../dist/imgs/headphone.svg"/></div>
+              <div class="card__hover"><a id="">        <img class="card__hover--heart" src="../../../dist/imgs/hearts.svg"/></a><a class="product-link-i" href="#">   <img class="card__hover--cart" src="../../../dist/imgs/cart_2.svg"/></a></div>
+              <div class=" card__info"> <span class="card__title">Apple Macbook Pro</span>
+                <div class="card__rate ssmb"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+                <div class="card__price--container"><span class="card__price">$499 </span>
+                  <del class="card__price--del">$599</del>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="best-seller-card__slider--container">   </div>
+                    <figure class="gopro"> 
+                      <figureCaption>
+                        <h2 class="figure-3__caption--heading">GoPro Hero 6</h2>
+                        <p class="gopro__paragraph">Lorem Ipsum dolor sit amet, consectetur adipiscing elit, labor</p><span class="gopro__price">$299</span>
+                      </figureCaption><img src="../../../dist/imgs/gopro.svg"/>
+                    </figure>
+        </div>
+        <div class="product__tabs"> 
+          <div class="product__tabs--tabs">   <a class="product__tabs--link product__tabs--link-active" href="#">Product Infomation </a><a class="product__tabs--link " href="#">Reviews <span>0</span></a><a class="product__tabs--link " href="#">Another tab    </a></div>
+          <div class="product__tabs--content"> 
+            <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.</p>
+            <p>Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.    </p>
+          </div>
+        </div>
+      </div>
+      <div class="related"> 
+        <h2>RELATED PRODUCTS</h2>
+        <div class="related__products">   
+          <div class="card  ">
+            <div class="card__img-container"><img class="card__img" src="../../../dist/imgs/card-img.svg"/></div>
+            <div class="card__hover"><a id="">        <img class="card__hover--heart" src="../../../dist/imgs/hearts.svg"/></a><a class="product-link-i" href="#">   <img class="card__hover--cart" src="../../../dist/imgs/cart_2.svg"/></a></div>
+            <div class=" card__info"> <span class="card__title">Apple Macbook Pro</span>
+              <div class="card__rate ssmb"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+              <div class="card__price--container"><span class="card__price">$499 </span>
+                <del class="card__price--del">$599</del>
+              </div>
+            </div>
+          </div>
+          <div class="card  ">
+            <div class="card__img-container"><img class="card__img" src="../../../dist/imgs/card-img.svg"/></div>
+            <div class="card__hover"><a id="">        <img class="card__hover--heart" src="../../../dist/imgs/hearts.svg"/></a><a class="product-link-i" href="#">   <img class="card__hover--cart" src="../../../dist/imgs/cart_2.svg"/></a></div>
+            <div class=" card__info"> <span class="card__title">Apple Macbook Pro</span>
+              <div class="card__rate ssmb"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+              <div class="card__price--container"><span class="card__price">$499 </span>
+                <del class="card__price--del">$599</del>
+              </div>
+            </div>
+          </div>
+          <div class="card  ">
+            <div class="card__img-container"><img class="card__img" src="../../../dist/imgs/card-img.svg"/></div>
+            <div class="card__hover"><a id="">        <img class="card__hover--heart" src="../../../dist/imgs/hearts.svg"/></a><a class="product-link-i" href="#">   <img class="card__hover--cart" src="../../../dist/imgs/cart_2.svg"/></a></div>
+            <div class=" card__info"> <span class="card__title">Apple Macbook Pro</span>
+              <div class="card__rate ssmb"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+              <div class="card__price--container"><span class="card__price">$499 </span>
+                <del class="card__price--del">$599</del>
+              </div>
+            </div>
+          </div>
+          <div class="card  ">
+            <div class="card__img-container"><img class="card__img" src="../../../dist/imgs/card-img.svg"/></div>
+            <div class="card__hover"><a id="">        <img class="card__hover--heart" src="../../../dist/imgs/hearts.svg"/></a><a class="product-link-i" href="#">   <img class="card__hover--cart" src="../../../dist/imgs/cart_2.svg"/></a></div>
+            <div class=" card__info"> <span class="card__title">Apple Macbook Pro</span>
+              <div class="card__rate ssmb"><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-yellow.svg"/><img class="card__rate--star" src="../../../dist/imgs/star-grey.svg"/></div>
+              <div class="card__price--container"><span class="card__price">$499 </span>
+                <del class="card__price--del">$599</del>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer__horizontal-1"></div>
+      <div class="footer"> 
+        <div class="footer__item-1"><img class="footer__item-1--logo" src="../../../dist/imgs/logo.svg"/>
+          <p class="footer__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever.Since the 1500s, when an unknown printer.</p>
+        </div>
+        <div class="footer__item-2">
+          <h5 class="fifth--heading">Follow us</h5>
+          <p class="footer__text"> Since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+          <ul class="follow--list">
+            <li class="follow--list--icon"> <a href="https://www.facebook.com/" target="_blank"><img src="../../../dist/imgs/fb.svg"/></a></li>
+            <li> <a href="https://www.twitter.com/" target="_blank"><img src="../../../dist/imgs/tw.svg"/></a></li>
+          </ul>
+        </div>
+        <div class="footer__item-3">
+          <h5 class="fifth--heading">Contact Us</h5>
+          <ul class="lists">
+            <li> 
+              <p class="footer__text"> My Company , 4578 Marmora Road, Glasgow D04 89GR </p>
+            </li>
+            <li> 
+              <p class="footer__text"> Call us now: 0123-456-789</p>
+            </li>
+            <li> <a class="email" href="mailto:support@whatever.com">Email:support@whatever.com</a></li>
+          </ul>
+        </div>
+        <div class="footer__horizontal-2"></div>
+            <div class="footer__item-4">
+              <h5 class="fifth--heading">Information</h5>
+              <ul class="lists"> 
+                <li></li><a class="list-item" href="#">About us</a>
+                <li></li><a class="list-item" href="#">Information</a>
+                <li></li><a class="list-item" href="#">Privacy Policy</a>
+                <li></li><a class="list-item" href="#">Terms and Conditions</a>
+              </ul>
+            </div>
+            <div class="footer__item-5">
+              <h5 class="fifth--heading">Service</h5>
+              <ul class="lists"> 
+                <li></li><a class="list-item" href="#">About us</a>
+                <li></li><a class="list-item" href="#">Information</a>
+                <li></li><a class="list-item" href="#">Privacy Policy</a>
+                <li></li><a class="list-item" href="#">Terms and Conditions</a>
+              </ul>
+            </div>
+            <div class="footer__item-6">
+              <h5 class="fifth--heading">Extras</h5>
+              <ul class="lists"> 
+                <li></li><a class="list-item" href="#">About us</a>
+                <li></li><a class="list-item" href="#">Information</a>
+                <li></li><a class="list-item" href="#">Privacy Policy</a>
+                <li></li><a class="list-item" href="#">Terms and Conditions</a>
+              </ul>
+            </div>
+            <div class="footer__item-7">
+              <h5 class="fifth--heading">My Account</h5>
+              <ul class="lists"> 
+                <li></li><a class="list-item" href="#">About us</a>
+                <li></li><a class="list-item" href="#">Information</a>
+                <li></li><a class="list-item" href="#">Privacy Policy</a>
+                <li></li><a class="list-item" href="#">Terms and Conditions</a>
+              </ul>
+            </div>
+            <div class="footer__item-8">
+              <h5 class="fifth--heading">Userful Links</h5>
+              <ul class="lists"> 
+                <li></li><a class="list-item" href="#">About us</a>
+                <li></li><a class="list-item" href="#">Information</a>
+                <li></li><a class="list-item" href="#">Privacy Policy</a>
+                <li></li><a class="list-item" href="#">Terms and Conditions</a>
+              </ul>
+            </div>
+            <div class="footer__item-9">
+              <h5 class="fifth--heading">Our Offers</h5>
+              <ul class="lists"> 
+                <li></li><a class="list-item" href="#">About us</a>
+                <li></li><a class="list-item" href="#">Information</a>
+                <li></li><a class="list-item" href="#">Privacy Policy</a>
+                <li></li><a class="list-item" href="#">Terms and Conditions</a>
+              </ul>
+            </div>
+      </div>
+      <div class="footer__horizontal-3"></div>
+      <div class="footer__copyright"> 
+        <p class="footer__copyright--text">&copy; 2018 Ecommerce theme by www.bisenbaev.com</p>
+        <div class="footer__copyright--payments">        <img class="footer__copyright--photo" src="../../../dist/imgs/Western-union.jpg"/><img class="footer__copyright--photo" src="../../../dist/imgs/Group-19.jpg"/><img class="footer__copyright--photo" src="../../../dist/imgs/Paypal.jpg"/><img class="footer__copyright--photo" src="../../../dist/imgs/visa.jpg"/></div>
+      </div>
+    </footer>
+  </body>
+</html>
