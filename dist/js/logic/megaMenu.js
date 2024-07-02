@@ -1,21 +1,27 @@
-const homeItem = document.getElementById('nav__item--mega');
-const megaMenu = document.querySelector('.nav__mega-menu');
-
-homeItem.addEventListener('mouseover', () => {
-    megaMenu.style.opacity = '1';
-    megaMenu.style.visibility = 'visible';
-});
-
-homeItem.addEventListener('mouseout', () => {
-    setTimeout(() => {
+document.addEventListener('DOMContentLoaded', () => {
+    const homeItem = document.getElementById('nav__item--mega');
+    const megaMenu = document.querySelector('.nav__mega-menu');
+  
+    const showMegaMenu = () => {
+      megaMenu.style.opacity = '1';
+      megaMenu.style.visibility = 'visible';
+    };
+  
+    const hideMegaMenu = () => {
+      megaMenu.style.opacity = '0';
+      megaMenu.style.visibility = 'hidden';
+    };
+  
+    homeItem.addEventListener('mouseover', showMegaMenu);
+  
+    homeItem.addEventListener('mouseout', () => {
+      setTimeout(() => {
         if (!megaMenu.matches(':hover')) {
-            megaMenu.style.opacity = '0';
-            megaMenu.style.visibility = 'hidden';
+          hideMegaMenu();
         }
-    }, 10000);
-});
-
-megaMenu.addEventListener('mouseleave', () => {
-    megaMenu.style.opacity = '0';
-    megaMenu.style.visibility = 'hidden';
-});
+      }, 10000); // 10 seconds
+    });
+  
+    megaMenu.addEventListener('mouseleave', hideMegaMenu);
+  });
+  
