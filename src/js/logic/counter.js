@@ -1,23 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const counterValue = document.getElementById('counter-value');
-    const incrementButton = document.getElementById('increment');
-    const decrementButton = document.getElementById('decrement');
+  // Select the counter display and the increment/decrement buttons
+  const counterValue = document.getElementById('counter-value');
+  const incrementButton = document.getElementById('increment');
+  const decrementButton = document.getElementById('decrement');
   
-    function updateDisplay() {
+  // Initialize the counter value
+  let counter = 1;
+
+  // Function to update the displayed counter value
+  function updateDisplay() {
       counterValue.textContent = counter;
-    }
+  }
   
-    let counter = 1;
-    
-    decrementButton.addEventListener('click', () => {
-      if(counter > 1){
-        counter--;
-        updateDisplay();      }
-      
-    });
-    
-    incrementButton.addEventListener('click', () => {
+  // Event listener for the decrement button
+  decrementButton.addEventListener('click', () => {
+      // Only decrement if the counter is greater than 1
+      if(counter > 1) {
+          counter--;
+          updateDisplay(); // Update the display after decrementing
+      }
+  });
+  
+  // Event listener for the increment button
+  incrementButton.addEventListener('click', () => {
       counter++;
-      updateDisplay();
-        });
-  });  
+      updateDisplay(); // Update the display after incrementing
+  });
+
+  // Initial display update
+  updateDisplay();
+});
