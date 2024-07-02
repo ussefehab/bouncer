@@ -1,6 +1,9 @@
 extend ../base/base.pug
 append script
+    script( src="../../../src/js/logic/imgSwap.js" defer) 
     script( src="../../../src/js/logic/card-slider.js" defer) 
+    script( src="../../../src/js/logic/counter.js" defer) 
+    script( src="../../../src/js/logic/dropdownButton.js" defer) 
         
 include ../component/card.pug
 block header
@@ -15,14 +18,14 @@ block product
             .product__images
                 img(src="../../../dist/imgs/hpbig.jpg" class="product__images--img")
                 .product__images--collection 
-                    .product__images--box
-                        img(src="../../../dist/imgs/hps.jpg" class="product__images--small")
-                    .product__images--box    
-                        img(src="../../../dist/imgs/hp2.jpg" class="product__images--small")
-                    .product__images--box
-                        img(src="../../../dist/imgs/hpss.jpg" class="product__images--small")
-                    .product__images--box 
-                        img(src="../../../dist/imgs/hp3.jpg" class="product__images--small mrl")
+                    .product__images--box#box--1
+                        img(src="../../../dist/imgs/hps.jpg" class="product__images--small" id="img--1")
+                    .product__images--box#box--2   
+                        img(src="../../../dist/imgs/hp2.jpg" class="product__images--small" id="img--2")
+                    .product__images--box.product__images--box-active#box--3
+                        img(src="../../../dist/imgs/hpbig.jpg" class="product__images--small" id="img--3")
+                    .product__images--box#box--4 
+                        img(src="../../../dist/imgs/hp3.jpg" class="product__images--small mrl" id="img--4")
                         
             .product__information--description
                 +cardTitle("Beats Solo2 On Ear Headphones - Black")

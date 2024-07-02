@@ -9,18 +9,19 @@ nav.nav
       li.nav__li
         if item == "Accessories"
           a.nav__item(href="#" class="products-link") #{item}
-        if item !== "Accessories"       
-          a.nav__item(href="#"+item) #{item}
-        if item == "Home"
-            .nav__mega-menu
-                .nav__mega-menu-content
-                    each column in megaMenuContent
-                        .nav__mega-menu--column
-                            p.heading--three= column.title
-                            ul.nav__mega-menu--list
-                                each link in column.links
-                                    li
-                                        a.nav__item(href="#") #{link}
+        else if item == "Home"
+          a.nav__item#nav__item--mega(href="#Home") #{item}
+        else
+          a.nav__item(href="#" + item) #{item}
+  .nav__mega-menu
+      .nav__mega-menu-content
+          each column in megaMenuContent
+              .nav__mega-menu--column
+                  p.heading--three= column.title
+                  ul.nav__mega-menu--list
+                      each link in column.links
+                          li
+                              a.nav__item(href="#") #{link}
                             
                             
 

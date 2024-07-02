@@ -51,11 +51,12 @@
         }
         &--small{
             width:100%;
+            // height: 25%;
+            // transform: scale(.25);
             display: flex;
         }
         &--box{
-            // display: flex;
-            // align-items: center;
+            width: 10rem;    
             position: relative;
             &::before {
                 content: '';
@@ -67,7 +68,22 @@
                 box-shadow: 0 0 0 2px $color-gray-border;
                 z-index: 1; /* Place the border behind the image */
             }
+            &-active{
+                width: 10rem;    
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    box-shadow: 0 0 0 2px $color-primary;
+                    z-index: 1; /* Place the border behind the image */
+                }
+            }
         }
+
     }
     &__category {
         display: flex;

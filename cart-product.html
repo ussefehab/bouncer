@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>BOUNCER</title>
     <link href="../../../dist/css/styles.min.css" rel="stylesheet"/>
-    <script src="../../../src/js/logic/scripts.js" defer="defer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+    <script src="../../../src/js/logic/megaMenu.js" defer="defer"></script>
+    <script src="../../../src/js/logic/routs.js" defer="defer"></script>
+    <script src="../../../src/js/logic/mobileMenu.js" defer="defer"></script>
+    <script src="../../../src/js/logic/imgSwap.js" defer="defer"> </script>
     <script src="../../../src/js/logic/card-slider.js" defer="defer"> </script>
+    <script src="../../../src/js/logic/counter.js" defer="defer"> </script>
+    <script src="../../../src/js/logic/dropdownButton.js" defer="defer"> </script>
   </head>
   <body>
     <div class="header-container">  
@@ -120,54 +124,7 @@
       </ul>
       <nav class="nav"> <img class="nav__logo" src="../../../dist/imgs/logo-main.jpg"/>
         <ul class="nav__list">
-          <li class="nav__li"><a class="nav__item" href="#Home">Home</a>
-            <div class="nav__mega-menu">
-              <div class="nav__mega-menu-content">
-                <div class="nav__mega-menu--column">
-                  <p class="heading--three">Category</p>
-                  <ul class="nav__mega-menu--list">
-                    <li><a class="nav__item" href="#">AirPort &amp; Wireless</a></li>
-                    <li><a class="nav__item" href="#">AppleCare</a></li>
-                    <li><a class="nav__item" href="#">Bags, Shells &amp; Sleeves</a></li>
-                    <li><a class="nav__item" href="#">Business &amp; Security</a></li>
-                    <li><a class="nav__item" href="#">Cables &amp; Docks</a></li>
-                  </ul>
-                </div>
-                <div class="nav__mega-menu--column">
-                  <p class="heading--three"></p>
-                  <ul class="nav__mega-menu--list">
-                    <li><a class="nav__item" href="#">Cameras &amp; Video</a></li>
-                    <li><a class="nav__item" href="#">Car &amp; Travel</a></li>
-                    <li><a class="nav__item" href="#">Cases &amp; Films</a></li>
-                  </ul>
-                </div>
-                <div class="nav__mega-menu--column">
-                  <p class="heading--three">Category</p>
-                  <ul class="nav__mega-menu--list">
-                    <li><a class="nav__item" href="#">Charging Devices</a></li>
-                    <li><a class="nav__item" href="#">Connected Home</a></li>
-                    <li><a class="nav__item" href="#">Device Care</a></li>
-                    <li><a class="nav__item" href="#">Display &amp; Graphic</a></li>
-                    <li><a class="nav__item" href="#">Fitness &amp; Sport</a></li>
-                  </ul>
-                </div>
-                <div class="nav__mega-menu--column">
-                  <p class="heading--three"></p>
-                  <ul class="nav__mega-menu--list">
-                    <li><a class="nav__item" href="#">Headphones</a></li>
-                    <li><a class="nav__item" href="#">HealhKit</a></li>
-                  </ul>
-                </div>
-                <div class="nav__mega-menu--column">
-                  <p class="heading--three">Category</p>
-                  <ul class="nav__mega-menu--list">
-                    <li><a class="nav__item" href="#">Mice &amp; Keyboards</a></li>
-                    <li><a class="nav__item" href="#">Music Creation</a></li>
-                    <li><a class="nav__item" href="#">Networking &amp; Server</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+          <li class="nav__li"><a class="nav__item" id="nav__item--mega" href="#Home">Home</a>
           </li>
           <li class="nav__li"><a class="nav__item" href="#Store">Store</a>
           </li>
@@ -180,6 +137,53 @@
           <li class="nav__li"><a class="nav__item products-link" href="#">Accessories</a>
           </li>
         </ul>
+        <div class="nav__mega-menu">
+          <div class="nav__mega-menu-content">
+            <div class="nav__mega-menu--column">
+              <p class="heading--three">Category</p>
+              <ul class="nav__mega-menu--list">
+                <li><a class="nav__item" href="#">AirPort &amp; Wireless</a></li>
+                <li><a class="nav__item" href="#">AppleCare</a></li>
+                <li><a class="nav__item" href="#">Bags, Shells &amp; Sleeves</a></li>
+                <li><a class="nav__item" href="#">Business &amp; Security</a></li>
+                <li><a class="nav__item" href="#">Cables &amp; Docks</a></li>
+              </ul>
+            </div>
+            <div class="nav__mega-menu--column">
+              <p class="heading--three"></p>
+              <ul class="nav__mega-menu--list">
+                <li><a class="nav__item" href="#">Cameras &amp; Video</a></li>
+                <li><a class="nav__item" href="#">Car &amp; Travel</a></li>
+                <li><a class="nav__item" href="#">Cases &amp; Films</a></li>
+              </ul>
+            </div>
+            <div class="nav__mega-menu--column">
+              <p class="heading--three">Category</p>
+              <ul class="nav__mega-menu--list">
+                <li><a class="nav__item" href="#">Charging Devices</a></li>
+                <li><a class="nav__item" href="#">Connected Home</a></li>
+                <li><a class="nav__item" href="#">Device Care</a></li>
+                <li><a class="nav__item" href="#">Display &amp; Graphic</a></li>
+                <li><a class="nav__item" href="#">Fitness &amp; Sport</a></li>
+              </ul>
+            </div>
+            <div class="nav__mega-menu--column">
+              <p class="heading--three"></p>
+              <ul class="nav__mega-menu--list">
+                <li><a class="nav__item" href="#">Headphones</a></li>
+                <li><a class="nav__item" href="#">HealhKit</a></li>
+              </ul>
+            </div>
+            <div class="nav__mega-menu--column">
+              <p class="heading--three">Category</p>
+              <ul class="nav__mega-menu--list">
+                <li><a class="nav__item" href="#">Mice &amp; Keyboards</a></li>
+                <li><a class="nav__item" href="#">Music Creation</a></li>
+                <li><a class="nav__item" href="#">Networking &amp; Server</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </nav>
     </div>
     <main>    
@@ -192,10 +196,10 @@
         <div class="product__information">
           <div class="product__images"><img class="product__images--img" src="../../../dist/imgs/hpbig.jpg"/>
             <div class="product__images--collection"> 
-              <div class="product__images--box"><img class="product__images--small" src="../../../dist/imgs/hps.jpg"/></div>
-              <div class="product__images--box">   <img class="product__images--small" src="../../../dist/imgs/hp2.jpg"/></div>
-              <div class="product__images--box"><img class="product__images--small" src="../../../dist/imgs/hpss.jpg"/></div>
-              <div class="product__images--box"> <img class="product__images--small mrl" src="../../../dist/imgs/hp3.jpg"/></div>
+              <div class="product__images--box" id="box--1"><img class="product__images--small" src="../../../dist/imgs/hps.jpg" id="img--1"/></div>
+              <div class="product__images--box" id="box--2">  <img class="product__images--small" src="../../../dist/imgs/hp2.jpg" id="img--2"/></div>
+              <div class="product__images--box product__images--box-active" id="box--3"><img class="product__images--small" src="../../../dist/imgs/hpbig.jpg" id="img--3"/></div>
+              <div class="product__images--box" id="box--4"> <img class="product__images--small mrl" src="../../../dist/imgs/hp3.jpg" id="img--4"/></div>
             </div>
           </div>
           <div class="product__information--description">
