@@ -651,12 +651,16 @@ text-decoration: none;
     }
     &--content{
         padding: 3rem 6.8rem 0 2rem;
+        display: none;
         p{
             font-size: 1.4rem;
             line-height: 1.6;
             font-family: proxima nova;
             color: $color-black-light;
             margin-bottom: 3rem;
+        }
+        &-active{
+            display: block;
         }
     }
     }

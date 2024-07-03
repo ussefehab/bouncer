@@ -880,6 +880,7 @@ body {
 
 .product__tabs--content {
   padding: 3rem 6.8rem 0 2rem;
+  display: none;
 }
 
 .product__tabs--content p {
@@ -888,6 +889,10 @@ body {
   font-family: proxima nova;
   color: #262626;
   margin-bottom: 3rem;
+}
+
+.product__tabs--content-active {
+  display: block;
 }
 
 .related {
